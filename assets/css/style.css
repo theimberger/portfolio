@@ -1,0 +1,33 @@
+h1 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+  padding-top: 10px;
+}
+
+#welcome {
+  margin: 150px 150px;
+  width: 50%;
+}
+
+#search {
+  margin-top: 50px;
+  border: none;
+  border-bottom: 2px solid lightgrey;
+  color: lightgrey;
+  padding-bottom: 5px;
+  width: 100%;
+  min-width: 100px;
+  max-width: 400px;
+  outline: none;
+  font-size: 2em;
+}
+
+#search:focus {
+  border-bottom: 2px solid black;
+  color: black;
+}
