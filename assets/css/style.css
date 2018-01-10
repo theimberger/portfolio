@@ -9,7 +9,7 @@ h2 {
   padding-top: 10px;
 }
 
-#welcome {
+#search_container {
   margin: 150px 150px;
   width: 50%;
 }
@@ -25,6 +25,7 @@ h2 {
   max-width: 400px;
   outline: none;
   font-size: 2em;
+  letter-spacing: 5px;
 }
 
 #search:focus {
