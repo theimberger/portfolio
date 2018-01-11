@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchResults from './search_results';
 
 const SearchContainer = (props) => {
 
@@ -14,6 +15,10 @@ const SearchContainer = (props) => {
         onChange={props.update}
       />
 
+      <SearchResults
+        results={props.results}
+        searchTerm={props.searchValue}
+      />
     </div>
   );
 };
