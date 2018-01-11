@@ -1,4 +1,4 @@
-body, html, #app, #root {
+body, html, #app {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -6,4 +6,9 @@ body, html, #app, #root {
   font-family: 'Work Sans', sans-serif;
   font-size: 20px;
   overflow: hidden;
+  font-weight: 300;
+}
+
+h1, h2, input {
+  font-weight: 300;
 }
