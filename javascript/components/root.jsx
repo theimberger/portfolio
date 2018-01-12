@@ -2,6 +2,7 @@ import React from 'react';
 import Signature from './signature';
 import SearchContainer from './search_container';
 import SearchMap from './search_map';
+import ViewPort from './view_port';
 import { enterSearchMode } from '../utils/ui_utils';
 
 class Root extends React.Component {
@@ -15,6 +16,7 @@ class Root extends React.Component {
     };
 
     this.updateSearch = this.updateSearch.bind(this);
+    this.itemSelectHandler = this.itemSelectHandler.bind(this);
   }
 
   updateSearch(e) {
@@ -42,7 +44,10 @@ class Root extends React.Component {
   }
 
   itemSelectHandler(item) {
-    console.log(item);
+    let newState = this.state;
+    newState.pageRendered = <item.component />;
+    newState.searchValue = item.terms[0];
+    this.setState(newState);
   }
 
   render() {
@@ -55,6 +60,7 @@ class Root extends React.Component {
           searchValue={this.state.searchValue}
           itemSelectHandler={this.itemSelectHandler}
         />
+        <ViewPort currentPage={this.state.pageRendered} />
       </React.Fragment>
     );
   }

@@ -12,10 +12,14 @@ export const enterSearchMode = () => {
 };
 
 export const toggleActiveSearch = () => {
-  let $searchLine = $(".search_line");
+  let $searchLine = $(".search_line"),
+      $searchResults = $("#search_results");
+
   if ($searchLine.hasClass("active")) {
     $searchLine.removeClass("active");
+    setTimeout(() => $searchResults.addClass("hidden"), 10);
   } else {
     $searchLine.addClass("active");
+    $searchResults.removeClass("hidden");
   }
 };
