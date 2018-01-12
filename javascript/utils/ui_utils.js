@@ -6,6 +6,9 @@ export const enterSearchMode = () => {
   offset = "-" + offset + "px";
   $searchContainer.css("top", offset);
   $searchLine.addClass("expanded");
+  setTimeout(() => {
+    $("#signature").removeClass("hidden");
+  }, 1000);
 };
 
 export const toggleActiveSearch = () => {
