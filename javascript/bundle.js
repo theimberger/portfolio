@@ -258,6 +258,21 @@ process.umask = function() { return 0; };
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(15);
+} else {
+  module.exports = __webpack_require__(16);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
 /**
@@ -296,7 +311,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -393,7 +408,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -414,21 +429,6 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 module.exports = emptyObject;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(15);
-} else {
-  module.exports = __webpack_require__(16);
-}
-
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -506,7 +506,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -682,7 +682,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -940,7 +940,7 @@ module.exports = focusNode;
 "use strict";
 
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -973,7 +973,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(2),n=__webpack_require__(3),p=__webpack_require__(1),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
+var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(2),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var z={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function A(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}A.prototype.isReactComponent={};A.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?y("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};A.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function B(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}function C(){}C.prototype=A.prototype;var D=B.prototype=new C;D.constructor=B;m(D,A.prototype);D.isPureReactComponent=!0;function E(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}var F=E.prototype=new C;F.constructor=E;m(F,A.prototype);F.unstable_isAsyncReactComponent=!0;F.render=function(){return this.props.children};var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
@@ -1009,11 +1009,11 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(2);
-var emptyObject = __webpack_require__(3);
+var _assign = __webpack_require__(3);
+var emptyObject = __webpack_require__(4);
 var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 var checkPropTypes = __webpack_require__(7);
 
 // TODO: this is special because it gets imported during build.
@@ -2434,7 +2434,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(4),l=__webpack_require__(8),B=__webpack_require__(2),C=__webpack_require__(1),ba=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),fa=__webpack_require__(12),ia=__webpack_require__(13),D=__webpack_require__(3);
+var aa=__webpack_require__(1),l=__webpack_require__(8),B=__webpack_require__(3),C=__webpack_require__(2),ba=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),fa=__webpack_require__(12),ia=__webpack_require__(13),D=__webpack_require__(4);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -2731,18 +2731,18 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var React = __webpack_require__(4);
+var React = __webpack_require__(1);
 var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
 var ExecutionEnvironment = __webpack_require__(8);
-var _assign = __webpack_require__(2);
-var emptyFunction = __webpack_require__(1);
+var _assign = __webpack_require__(3);
+var emptyFunction = __webpack_require__(2);
 var EventListener = __webpack_require__(9);
 var getActiveElement = __webpack_require__(10);
 var shallowEqual = __webpack_require__(11);
 var containsNode = __webpack_require__(12);
 var focusNode = __webpack_require__(13);
-var emptyObject = __webpack_require__(3);
+var emptyObject = __webpack_require__(4);
 var checkPropTypes = __webpack_require__(7);
 var hyphenateStyleName = __webpack_require__(23);
 var camelizeStyleName = __webpack_require__(25);
@@ -18280,17 +18280,19 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _search_container = __webpack_require__(30);
+var _search_container = __webpack_require__(28);
 
 var _search_container2 = _interopRequireDefault(_search_container);
 
-var _search_map = __webpack_require__(29);
+var _search_map = __webpack_require__(31);
 
 var _search_map2 = _interopRequireDefault(_search_map);
+
+var _ui_utils = __webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18310,7 +18312,8 @@ var Root = function (_React$Component) {
 
     _this.state = {
       searchValue: "",
-      results: []
+      results: [],
+      pageRendered: false
     };
 
     _this.updateSearch = _this.updateSearch.bind(_this);
@@ -18320,6 +18323,10 @@ var Root = function (_React$Component) {
   _createClass(Root, [{
     key: 'updateSearch',
     value: function updateSearch(e) {
+      if (this.state.searchValue === "" && !this.pageRendered) {
+        (0, _ui_utils.enterSearchMode)();
+      }
+
       var newState = this.state;
       newState.searchValue = e.target.value;
       var results = [];
@@ -18327,7 +18334,7 @@ var Root = function (_React$Component) {
       if (newState.searchValue !== "") {
         _search_map2.default.forEach(function (option) {
           option.terms.forEach(function (term) {
-            if (term.includes(newState.searchValue)) {
+            if (results[results.length - 1] !== option && term.includes(newState.searchValue)) {
               results.push(option);
             }
           });
@@ -18357,42 +18364,7 @@ var Root = function (_React$Component) {
 exports.default = Root;
 
 /***/ }),
-/* 28 */,
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var SearchMap = [{
-  terms: ["contact"],
-  parent: false,
-  component: "./contact/contact.jsx"
-}, {
-  terms: ["profiles"],
-  parent: false,
-  component: "./contact/profiles.jsx"
-}, {
-  terms: ["work", "projects"],
-  parent: false,
-  component: "./work/work.jsx"
-}, {
-  terms: ["experience", "work history"],
-  parent: false,
-  component: "./work/experience.jsx"
-}, {
-  terms: ["skills"],
-  parent: false,
-  component: "./work/skills.jsx"
-}];
-
-exports.default = SearchMap;
-
-/***/ }),
-/* 30 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18402,13 +18374,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _search_results = __webpack_require__(31);
+var _search_results = __webpack_require__(29);
 
 var _search_results2 = _interopRequireDefault(_search_results);
+
+var _ui_utils = __webpack_require__(32);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18434,9 +18408,17 @@ var SearchContainer = function SearchContainer(props) {
     ),
     _react2.default.createElement('input', {
       id: 'search',
+      autocomplete: 'off',
       value: props.searchValue,
-      onChange: props.update
+      onChange: props.update,
+      onFocus: function onFocus() {
+        return (0, _ui_utils.toggleActiveSearch)();
+      },
+      onBlur: function onBlur() {
+        return (0, _ui_utils.toggleActiveSearch)();
+      }
     }),
+    _react2.default.createElement('hr', { className: 'search_line' }),
     _react2.default.createElement(_search_results2.default, {
       results: props.results,
       searchTerm: props.searchValue
@@ -18447,7 +18429,7 @@ var SearchContainer = function SearchContainer(props) {
 exports.default = SearchContainer;
 
 /***/ }),
-/* 31 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18457,11 +18439,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _search_results_item = __webpack_require__(32);
+var _search_results_item = __webpack_require__(30);
 
 var _search_results_item2 = _interopRequireDefault(_search_results_item);
 
@@ -18492,7 +18474,7 @@ var SearchResults = function SearchResults(props) {
 exports.default = SearchResults;
 
 /***/ }),
-/* 32 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18502,7 +18484,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -18537,25 +18519,95 @@ var SearchResultsItem = function SearchResultsItem(props) {
     );
   });
 
-  return _react2.default.createElement(
-    "li",
-    { className: "search_result_item" },
-    _react2.default.createElement(
-      "span",
-      { className: "primary_term" },
-      itemName[0]
-    ),
-    _react2.default.createElement(
+  var primary = _react2.default.createElement(
+    "span",
+    { className: "primary_term" },
+    itemName[0]
+  );
+
+  var aliases = null;
+  if (itemName.length > 1) {
+    aliases = _react2.default.createElement(
       "span",
       { className: "aliases" },
       "(",
       itemName.slice(1),
       ")"
-    )
+    );
+  }
+
+  return _react2.default.createElement(
+    "li",
+    { className: "search_result_item" },
+    primary,
+    aliases
   );
 };
 
 exports.default = SearchResultsItem;
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var SearchMap = [{
+  terms: ["contact"],
+  parent: false,
+  component: "./contact/contact.jsx"
+}, {
+  terms: ["experience", "work history"],
+  parent: false,
+  component: "./work/experience.jsx"
+}, {
+  terms: ["profiles", "social media", "links"],
+  parent: "contact",
+  component: "./contact/profiles.jsx"
+}, {
+  terms: ["skills"],
+  parent: false,
+  component: "./work/skills.jsx"
+}, {
+  terms: ["work", "projects"],
+  parent: false,
+  component: "./work/work.jsx"
+}];
+
+exports.default = SearchMap;
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var enterSearchMode = exports.enterSearchMode = function enterSearchMode() {
+  var $searchContainer = $("#search_container"),
+      $searchLine = $(".search_line");
+
+  var offset = $searchContainer.height() - 55;
+  offset = "-" + offset + "px";
+  $searchContainer.css("top", offset);
+  $searchLine.addClass("expanded");
+};
+
+var toggleActiveSearch = exports.toggleActiveSearch = function toggleActiveSearch() {
+  var $searchLine = $(".search_line");
+  if ($searchLine.hasClass("active")) {
+    $searchLine.removeClass("active");
+  } else {
+    $searchLine.addClass("active");
+  }
+};
 
 /***/ })
 /******/ ]);

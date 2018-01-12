@@ -5,24 +5,24 @@ const SearchMap = [
     component: "./contact/contact.jsx"
   },
   {
-    terms: ["profiles"],
-    parent: false,
-    component: "./contact/profiles.jsx"
-  },
-  {
-    terms: ["work", "projects"],
-    parent: false,
-    component: "./work/work.jsx"
-  },
-  {
     terms: ["experience", "work history"],
     parent: false,
     component: "./work/experience.jsx"
   },
   {
+    terms: ["profiles", "social media", "links"],
+    parent: "contact",
+    component: "./contact/profiles.jsx"
+  },
+  {
     terms: ["skills"],
     parent: false,
     component: "./work/skills.jsx"
+  },
+  {
+    terms: ["work", "projects"],
+    parent: false,
+    component: "./work/work.jsx"
   }
 ];
 
