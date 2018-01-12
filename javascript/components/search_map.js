@@ -1,13 +1,21 @@
+import About from './other/about.jsx';
+// import Index from './other/index.jsx';
+import Project from './work/project.jsx';
+import Projects from './work/projects.jsx';
+import Contact from './contact/contact.jsx';
+import Profiles from './contact/profiles.jsx';
+
+
 const SearchMap = [
   {
     terms: ["about me", "bio"],
     parent: false,
-    component: "./other/about.jsx"
+    component: About
   },
   {
     terms: ["contact"],
     parent: false,
-    component: "./contact/contact.jsx"
+    component: Contact
   },
   {
     terms: ["experience", "resume", "work history", "background"],
@@ -22,27 +30,27 @@ const SearchMap = [
   {
     terms: ["nhof", "name hall of fame"],
     parent: "projects",
-    component: "./work/project.jsx"
+    component: Project
   },
   {
     terms: ["profiles", "social media", "links"],
     parent: "contact",
-    component: "./contact/profiles.jsx"
+    component: Profiles
   },
   {
-    terms: ["projects", "work"],
+    terms: ["projects", "work", "portfolio"],
     parent: false,
-    component: "./work/work.jsx"
+    component: Projects
   },
   {
     terms: ["relax"],
     parent: "projects",
-    component: "./work/project.jsx"
+    component: Project
   },
   {
     terms: ["shiftfour"],
     parent: "projects",
-    component: "./work/project.jsx"
+    component: Project
   },
   {
     terms: ["skills", "languages"],
@@ -52,7 +60,7 @@ const SearchMap = [
   {
     terms: ["wikipedia crawler"],
     parent: "projects",
-    component: "./work/project.jsx"
+    component: Project
   }
 ];
 
