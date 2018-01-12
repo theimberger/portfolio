@@ -18380,6 +18380,11 @@ var Root = function (_React$Component) {
       this.setState(newState);
     }
   }, {
+    key: 'itemSelectHandler',
+    value: function itemSelectHandler(item) {
+      console.log(item);
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -18389,7 +18394,8 @@ var Root = function (_React$Component) {
         _react2.default.createElement(_search_container2.default, {
           update: this.updateSearch,
           results: this.state.results,
-          searchValue: this.state.searchValue
+          searchValue: this.state.searchValue,
+          itemSelectHandler: this.itemSelectHandler
         })
       );
     }
@@ -18414,6 +18420,10 @@ Object.defineProperty(exports, "__esModule", {
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(36);
+
+var _pure2 = _interopRequireDefault(_pure);
 
 var _search_results = __webpack_require__(30);
 
@@ -18445,7 +18455,7 @@ var SearchContainer = function SearchContainer(props) {
     ),
     _react2.default.createElement('input', {
       id: 'search',
-      autocomplete: 'off',
+      autoComplete: 'off',
       value: props.searchValue,
       onChange: props.update,
       onFocus: function onFocus() {
@@ -18457,13 +18467,14 @@ var SearchContainer = function SearchContainer(props) {
     }),
     _react2.default.createElement('hr', { className: 'search_line' }),
     _react2.default.createElement(_search_results2.default, {
+      itemSelectHandler: props.itemSelectHandler,
       results: props.results,
       searchTerm: props.searchValue
     })
   );
 };
 
-exports.default = SearchContainer;
+exports.default = (0, _pure2.default)(SearchContainer);
 
 /***/ }),
 /* 30 */
@@ -18480,6 +18491,10 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _pure = __webpack_require__(36);
+
+var _pure2 = _interopRequireDefault(_pure);
+
 var _search_results_item = __webpack_require__(31);
 
 var _search_results_item2 = _interopRequireDefault(_search_results_item);
@@ -18495,6 +18510,7 @@ var SearchResults = function SearchResults(props) {
   var results = [];
   props.results.forEach(function (result, index) {
     results.push(_react2.default.createElement(_search_results_item2.default, {
+      itemSelectHandler: props.itemSelectHandler,
       item: result,
       key: index,
       searchTerm: props.searchTerm
@@ -18508,7 +18524,7 @@ var SearchResults = function SearchResults(props) {
   );
 };
 
-exports.default = SearchResults;
+exports.default = (0, _pure2.default)(SearchResults);
 
 /***/ }),
 /* 31 */
@@ -18524,6 +18540,10 @@ Object.defineProperty(exports, "__esModule", {
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(36);
+
+var _pure2 = _interopRequireDefault(_pure);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18548,8 +18568,8 @@ var SearchResultsItem = function SearchResultsItem(props) {
       _react2.default.Fragment,
       { key: index },
       _react2.default.createElement(
-        "span",
-        { className: "bold" },
+        'span',
+        { className: 'bold' },
         props.searchTerm
       ),
       term.slice(stIndex + props.searchTerm.length) + spacer
@@ -18560,16 +18580,16 @@ var SearchResultsItem = function SearchResultsItem(props) {
 
   if (props.item.parent) {
     primary = _react2.default.createElement(
-      "span",
-      { className: "primary_term" },
+      'span',
+      { className: 'primary_term' },
       props.item.parent,
-      "/",
+      '/',
       itemName[0]
     );
   } else {
     primary = _react2.default.createElement(
-      "span",
-      { className: "primary_term" },
+      'span',
+      { className: 'primary_term' },
       itemName[0]
     );
   }
@@ -18577,26 +18597,28 @@ var SearchResultsItem = function SearchResultsItem(props) {
   var aliases = null;
   if (itemName.length > 1) {
     aliases = _react2.default.createElement(
-      "span",
-      { className: "aliases" },
-      "(",
+      'span',
+      { className: 'aliases' },
+      '(',
       itemName.slice(1),
-      ")"
+      ')'
     );
   }
 
+  var clickHandler = function clickHandler(e) {
+    props.itemSelectHandler(props.item);
+  };
+
   return _react2.default.createElement(
-    "li",
-    { className: "search_result_item",
-      onClick: function onClick(e) {
-        return props.itemSelected;
-      } },
+    'li',
+    { className: 'search_result_item',
+      onClick: clickHandler },
     primary,
     aliases
   );
 };
 
-exports.default = SearchResultsItem;
+exports.default = (0, _pure2.default)(SearchResultsItem);
 
 /***/ }),
 /* 32 */
@@ -18682,6 +18704,209 @@ var Signature = function Signature() {
 };
 
 exports.default = Signature;
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _setStatic = __webpack_require__(38);
+
+var _setStatic2 = _interopRequireDefault(_setStatic);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var setDisplayName = function setDisplayName(displayName) {
+  return (0, _setStatic2.default)('displayName', displayName);
+};
+
+exports.default = setDisplayName;
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _getDisplayName = __webpack_require__(39);
+
+var _getDisplayName2 = _interopRequireDefault(_getDisplayName);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var wrapDisplayName = function wrapDisplayName(BaseComponent, hocName) {
+  return hocName + '(' + (0, _getDisplayName2.default)(BaseComponent) + ')';
+};
+
+exports.default = wrapDisplayName;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+exports.__esModule = true;
+
+var _shouldUpdate = __webpack_require__(37);
+
+var _shouldUpdate2 = _interopRequireDefault(_shouldUpdate);
+
+var _shallowEqual = __webpack_require__(40);
+
+var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
+
+var _setDisplayName = __webpack_require__(34);
+
+var _setDisplayName2 = _interopRequireDefault(_setDisplayName);
+
+var _wrapDisplayName = __webpack_require__(35);
+
+var _wrapDisplayName2 = _interopRequireDefault(_wrapDisplayName);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var pure = function pure(BaseComponent) {
+  var hoc = (0, _shouldUpdate2.default)(function (props, nextProps) {
+    return !(0, _shallowEqual2.default)(props, nextProps);
+  });
+
+  if (process.env.NODE_ENV !== 'production') {
+    return (0, _setDisplayName2.default)((0, _wrapDisplayName2.default)(BaseComponent, 'pure'))(hoc(BaseComponent));
+  }
+
+  return hoc(BaseComponent);
+};
+
+exports.default = pure;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+exports.__esModule = true;
+
+var _react = __webpack_require__(1);
+
+var _setDisplayName = __webpack_require__(34);
+
+var _setDisplayName2 = _interopRequireDefault(_setDisplayName);
+
+var _wrapDisplayName = __webpack_require__(35);
+
+var _wrapDisplayName2 = _interopRequireDefault(_wrapDisplayName);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var shouldUpdate = function shouldUpdate(test) {
+  return function (BaseComponent) {
+    var factory = (0, _react.createFactory)(BaseComponent);
+
+    var ShouldUpdate = function (_Component) {
+      _inherits(ShouldUpdate, _Component);
+
+      function ShouldUpdate() {
+        _classCallCheck(this, ShouldUpdate);
+
+        return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+      }
+
+      ShouldUpdate.prototype.shouldComponentUpdate = function shouldComponentUpdate(nextProps) {
+        return test(this.props, nextProps);
+      };
+
+      ShouldUpdate.prototype.render = function render() {
+        return factory(this.props);
+      };
+
+      return ShouldUpdate;
+    }(_react.Component);
+
+    if (process.env.NODE_ENV !== 'production') {
+      return (0, _setDisplayName2.default)((0, _wrapDisplayName2.default)(BaseComponent, 'shouldUpdate'))(ShouldUpdate);
+    }
+    return ShouldUpdate;
+  };
+};
+
+exports.default = shouldUpdate;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+var setStatic = function setStatic(key, value) {
+  return function (BaseComponent) {
+    /* eslint-disable no-param-reassign */
+    BaseComponent[key] = value;
+    /* eslint-enable no-param-reassign */
+    return BaseComponent;
+  };
+};
+
+exports.default = setStatic;
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+var getDisplayName = function getDisplayName(Component) {
+  if (typeof Component === 'string') {
+    return Component;
+  }
+
+  if (!Component) {
+    return undefined;
+  }
+
+  return Component.displayName || Component.name || 'Component';
+};
+
+exports.default = getDisplayName;
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _shallowEqual = __webpack_require__(11);
+
+var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _shallowEqual2.default;
 
 /***/ })
 /******/ ]);
