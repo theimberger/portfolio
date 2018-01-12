@@ -21,14 +21,21 @@ const SearchResultsItem = (props) => {
     );
   });
 
+  let primary = <span className="primary_term">
+                  {itemName[0]}
+                </span>;
+
+  let aliases = null;
+  if (itemName.length > 1) {
+    aliases = <span className="aliases">
+                ({itemName.slice(1)})
+              </span>;
+  }
+
   return (
     <li className="search_result_item">
-      <span className="primary_term">
-        {itemName[0]}
-      </span>
-      <span className="aliases">
-        ({itemName.slice(1)})
-      </span>
+      {primary}
+      {aliases}
     </li>
   );
 };

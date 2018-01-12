@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchContainer from './search_container';
 import SearchMap from './search_map';
+import { enterSearchMode } from '../utils/ui_utils';
 
 class Root extends React.Component {
 
@@ -8,13 +9,18 @@ class Root extends React.Component {
     super();
     this.state = {
       searchValue: "",
-      results: []
+      results: [],
+      pageRendered: false
     };
 
     this.updateSearch = this.updateSearch.bind(this);
   }
 
   updateSearch(e) {
+    if (this.state.searchValue === "" && !this.pageRendered) {
+      enterSearchMode();
+    }
+
     let newState = this.state;
     newState.searchValue = e.target.value;
     let results = [];
@@ -22,7 +28,8 @@ class Root extends React.Component {
     if (newState.searchValue !== "") {
       SearchMap.forEach(option => {
         option.terms.forEach( term => {
-          if (term.includes(newState.searchValue)) {
+          if (results[results.length - 1] !== option &&
+            term.includes(newState.searchValue)) {
             results.push(option);
           }
         });
