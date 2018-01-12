@@ -41,6 +41,10 @@ class Root extends React.Component {
     this.setState(newState);
   }
 
+  itemSelectHandler(item) {
+    console.log(item);
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -49,6 +53,7 @@ class Root extends React.Component {
           update={this.updateSearch}
           results={this.state.results}
           searchValue={this.state.searchValue}
+          itemSelectHandler={this.itemSelectHandler}
         />
       </React.Fragment>
     );

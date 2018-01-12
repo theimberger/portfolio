@@ -1,4 +1,5 @@
 import React from 'react';
+import pure from 'recompose/pure';
 import SearchResultsItem from './search_results_item';
 
 const SearchResults = (props) => {
@@ -11,6 +12,7 @@ const SearchResults = (props) => {
   props.results.forEach((result, index) => {
     results.push(
       <SearchResultsItem
+        itemSelectHandler={props.itemSelectHandler}
         item={result}
         key={index}
         searchTerm={props.searchTerm}
@@ -25,4 +27,4 @@ const SearchResults = (props) => {
   );
 };
 
-export default SearchResults;
+export default pure(SearchResults);

@@ -1,4 +1,5 @@
 import React from 'react';
+import pure from 'recompose/pure';
 
 const SearchResultsItem = (props) => {
 
@@ -41,13 +42,17 @@ const SearchResultsItem = (props) => {
               </span>;
   }
 
+  let clickHandler = (e) => {
+    props.itemSelectHandler(props.item);
+  };
+
   return (
     <li className="search_result_item"
-      onClick={(e) => props.itemSelected}>
+      onClick={clickHandler}>
       {primary}
       {aliases}
     </li>
   );
 };
 
-export default SearchResultsItem;
+export default pure(SearchResultsItem);

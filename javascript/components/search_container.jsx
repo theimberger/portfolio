@@ -1,6 +1,8 @@
 import React from 'react';
+import pure from 'recompose/pure';
 import SearchResults from './search_results';
 import { toggleActiveSearch } from '../utils/ui_utils';
+
 
 const SearchContainer = (props) => {
 
@@ -13,7 +15,7 @@ const SearchContainer = (props) => {
 
       <input
         id="search"
-        autocomplete="off"
+        autoComplete="off"
         value={props.searchValue}
         onChange={props.update}
         onFocus={ () => toggleActiveSearch() }
@@ -22,6 +24,7 @@ const SearchContainer = (props) => {
       <hr className="search_line" />
 
       <SearchResults
+        itemSelectHandler={props.itemSelectHandler}
         results={props.results}
         searchTerm={props.searchValue}
       />
@@ -29,4 +32,4 @@ const SearchContainer = (props) => {
   );
 };
 
-export default SearchContainer;
+export default pure(SearchContainer);
