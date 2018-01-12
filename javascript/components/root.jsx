@@ -1,4 +1,5 @@
 import React from 'react';
+import Signature from './signature';
 import SearchContainer from './search_container';
 import SearchMap from './search_map';
 import { enterSearchMode } from '../utils/ui_utils';
@@ -29,7 +30,8 @@ class Root extends React.Component {
       SearchMap.forEach(option => {
         option.terms.forEach( term => {
           if (results[results.length - 1] !== option &&
-            term.includes(newState.searchValue)) {
+            term.slice(0, newState.searchValue.length)
+            === newState.searchValue.toLowerCase()) {
             results.push(option);
           }
         });
@@ -42,6 +44,7 @@ class Root extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <Signature />
         <SearchContainer
           update={this.updateSearch}
           results={this.state.results}

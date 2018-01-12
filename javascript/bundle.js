@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 15);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -261,9 +261,9 @@ process.umask = function() { return 0; };
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(15);
-} else {
   module.exports = __webpack_require__(16);
+} else {
+  module.exports = __webpack_require__(17);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -577,7 +577,7 @@ module.exports = warning;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(5);
   var warning = __webpack_require__(6);
-  var ReactPropTypesSecret = __webpack_require__(17);
+  var ReactPropTypesSecret = __webpack_require__(18);
   var loggedTypeFailures = {};
 }
 
@@ -876,7 +876,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(20);
+var isTextNode = __webpack_require__(21);
 
 /*eslint-disable no-bitwise */
 
@@ -940,15 +940,47 @@ module.exports = focusNode;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var enterSearchMode = exports.enterSearchMode = function enterSearchMode() {
+  var $searchContainer = $("#search_container"),
+      $searchLine = $(".search_line");
+
+  var offset = $searchContainer.height() - 55;
+  offset = "-" + offset + "px";
+  $searchContainer.css("top", offset);
+  $searchLine.addClass("expanded");
+  setTimeout(function () {
+    $("#signature").removeClass("hidden");
+  }, 1000);
+};
+
+var toggleActiveSearch = exports.toggleActiveSearch = function toggleActiveSearch() {
+  var $searchLine = $(".search_line");
+  if ($searchLine.hasClass("active")) {
+    $searchLine.removeClass("active");
+  } else {
+    $searchLine.addClass("active");
+  }
+};
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(18);
+var _reactDom = __webpack_require__(19);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _root = __webpack_require__(27);
+var _root = __webpack_require__(28);
 
 var _root2 = _interopRequireDefault(_root);
 
@@ -960,7 +992,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -988,7 +1020,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2353,7 +2385,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2372,7 +2404,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2410,15 +2442,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(19);
+  module.exports = __webpack_require__(20);
 } else {
-  module.exports = __webpack_require__(22);
+  module.exports = __webpack_require__(23);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2654,7 +2686,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2669,7 +2701,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
  * @typechecks
  */
 
-var isNode = __webpack_require__(21);
+var isNode = __webpack_require__(22);
 
 /**
  * @param {*} object The object to check.
@@ -2682,7 +2714,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2710,7 +2742,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2744,8 +2776,8 @@ var containsNode = __webpack_require__(12);
 var focusNode = __webpack_require__(13);
 var emptyObject = __webpack_require__(4);
 var checkPropTypes = __webpack_require__(7);
-var hyphenateStyleName = __webpack_require__(23);
-var camelizeStyleName = __webpack_require__(25);
+var hyphenateStyleName = __webpack_require__(24);
+var camelizeStyleName = __webpack_require__(26);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -18112,7 +18144,7 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18127,7 +18159,7 @@ module.exports = reactDom;
 
 
 
-var hyphenate = __webpack_require__(24);
+var hyphenate = __webpack_require__(25);
 
 var msPattern = /^ms-/;
 
@@ -18154,7 +18186,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18190,7 +18222,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18205,7 +18237,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(26);
+var camelize = __webpack_require__(27);
 
 var msPattern = /^-ms-/;
 
@@ -18233,7 +18265,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18268,7 +18300,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18284,15 +18316,19 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _search_container = __webpack_require__(28);
+var _signature = __webpack_require__(33);
+
+var _signature2 = _interopRequireDefault(_signature);
+
+var _search_container = __webpack_require__(29);
 
 var _search_container2 = _interopRequireDefault(_search_container);
 
-var _search_map = __webpack_require__(31);
+var _search_map = __webpack_require__(32);
 
 var _search_map2 = _interopRequireDefault(_search_map);
 
-var _ui_utils = __webpack_require__(32);
+var _ui_utils = __webpack_require__(14);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18334,7 +18370,7 @@ var Root = function (_React$Component) {
       if (newState.searchValue !== "") {
         _search_map2.default.forEach(function (option) {
           option.terms.forEach(function (term) {
-            if (results[results.length - 1] !== option && term.includes(newState.searchValue)) {
+            if (results[results.length - 1] !== option && term.slice(0, newState.searchValue.length) === newState.searchValue.toLowerCase()) {
               results.push(option);
             }
           });
@@ -18349,6 +18385,7 @@ var Root = function (_React$Component) {
       return _react2.default.createElement(
         _react2.default.Fragment,
         null,
+        _react2.default.createElement(_signature2.default, null),
         _react2.default.createElement(_search_container2.default, {
           update: this.updateSearch,
           results: this.state.results,
@@ -18364,7 +18401,7 @@ var Root = function (_React$Component) {
 exports.default = Root;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18378,11 +18415,11 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _search_results = __webpack_require__(29);
+var _search_results = __webpack_require__(30);
 
 var _search_results2 = _interopRequireDefault(_search_results);
 
-var _ui_utils = __webpack_require__(32);
+var _ui_utils = __webpack_require__(14);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18429,7 +18466,7 @@ var SearchContainer = function SearchContainer(props) {
 exports.default = SearchContainer;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18443,7 +18480,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _search_results_item = __webpack_require__(30);
+var _search_results_item = __webpack_require__(31);
 
 var _search_results_item2 = _interopRequireDefault(_search_results_item);
 
@@ -18474,7 +18511,7 @@ var SearchResults = function SearchResults(props) {
 exports.default = SearchResults;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18498,7 +18535,8 @@ var SearchResultsItem = function SearchResultsItem(props) {
     if (index !== 0 && index !== props.item.terms.length - 1) {
       spacer = ", ";
     }
-    if (stIndex < 0) {
+
+    if (stIndex !== 0) {
       return _react2.default.createElement(
         _react2.default.Fragment,
         { key: index },
@@ -18509,7 +18547,6 @@ var SearchResultsItem = function SearchResultsItem(props) {
     return _react2.default.createElement(
       _react2.default.Fragment,
       { key: index },
-      term.slice(0, stIndex),
       _react2.default.createElement(
         "span",
         { className: "bold" },
@@ -18519,11 +18556,23 @@ var SearchResultsItem = function SearchResultsItem(props) {
     );
   });
 
-  var primary = _react2.default.createElement(
-    "span",
-    { className: "primary_term" },
-    itemName[0]
-  );
+  var primary = void 0;
+
+  if (props.item.parent) {
+    primary = _react2.default.createElement(
+      "span",
+      { className: "primary_term" },
+      props.item.parent,
+      "/",
+      itemName[0]
+    );
+  } else {
+    primary = _react2.default.createElement(
+      "span",
+      { className: "primary_term" },
+      itemName[0]
+    );
+  }
 
   var aliases = null;
   if (itemName.length > 1) {
@@ -18538,47 +18587,16 @@ var SearchResultsItem = function SearchResultsItem(props) {
 
   return _react2.default.createElement(
     "li",
-    { className: "search_result_item" },
+    { className: "search_result_item",
+      onClick: function onClick(e) {
+        return props.itemSelected;
+      } },
     primary,
     aliases
   );
 };
 
 exports.default = SearchResultsItem;
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var SearchMap = [{
-  terms: ["contact"],
-  parent: false,
-  component: "./contact/contact.jsx"
-}, {
-  terms: ["experience", "work history"],
-  parent: false,
-  component: "./work/experience.jsx"
-}, {
-  terms: ["profiles", "social media", "links"],
-  parent: "contact",
-  component: "./contact/profiles.jsx"
-}, {
-  terms: ["skills"],
-  parent: false,
-  component: "./work/skills.jsx"
-}, {
-  terms: ["work", "projects"],
-  parent: false,
-  component: "./work/work.jsx"
-}];
-
-exports.default = SearchMap;
 
 /***/ }),
 /* 32 */
@@ -18590,24 +18608,80 @@ exports.default = SearchMap;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var enterSearchMode = exports.enterSearchMode = function enterSearchMode() {
-  var $searchContainer = $("#search_container"),
-      $searchLine = $(".search_line");
+var SearchMap = [{
+  terms: ["about me", "bio"],
+  parent: false,
+  component: "./other/about.jsx"
+}, {
+  terms: ["contact"],
+  parent: false,
+  component: "./contact/contact.jsx"
+}, {
+  terms: ["experience", "resume", "work history", "background"],
+  parent: false,
+  component: "./work/experience.jsx"
+}, {
+  terms: ["index", "all"],
+  parent: false,
+  component: "./other/index.jsx"
+}, {
+  terms: ["nhof", "name hall of fame"],
+  parent: "projects",
+  component: "./work/project.jsx"
+}, {
+  terms: ["profiles", "social media", "links"],
+  parent: "contact",
+  component: "./contact/profiles.jsx"
+}, {
+  terms: ["projects", "work"],
+  parent: false,
+  component: "./work/work.jsx"
+}, {
+  terms: ["relax"],
+  parent: "projects",
+  component: "./work/project.jsx"
+}, {
+  terms: ["shiftfour"],
+  parent: "projects",
+  component: "./work/project.jsx"
+}, {
+  terms: ["skills", "languages"],
+  parent: false,
+  component: "./work/skills.jsx"
+}, {
+  terms: ["wikipedia crawler"],
+  parent: "projects",
+  component: "./work/project.jsx"
+}];
 
-  var offset = $searchContainer.height() - 55;
-  offset = "-" + offset + "px";
-  $searchContainer.css("top", offset);
-  $searchLine.addClass("expanded");
+exports.default = SearchMap;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Signature = function Signature() {
+  return _react2.default.createElement(
+    "div",
+    { id: "signature", className: "hidden" },
+    "//t"
+  );
 };
 
-var toggleActiveSearch = exports.toggleActiveSearch = function toggleActiveSearch() {
-  var $searchLine = $(".search_line");
-  if ($searchLine.hasClass("active")) {
-    $searchLine.removeClass("active");
-  } else {
-    $searchLine.addClass("active");
-  }
-};
+exports.default = Signature;
 
 /***/ })
 /******/ ]);

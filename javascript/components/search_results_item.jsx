@@ -8,22 +8,31 @@ const SearchResultsItem = (props) => {
     if (index !== 0 && index !== props.item.terms.length - 1) {
       spacer = ", ";
     }
-    if (stIndex < 0) {
+
+    if (stIndex !== 0) {
       return <React.Fragment key={index}>{term + spacer}</React.Fragment>;
     }
 
     return (
       <React.Fragment key={index}>
-        {term.slice(0, stIndex)}
         <span className="bold">{props.searchTerm}</span>
         {term.slice(stIndex + props.searchTerm.length) + spacer}
       </React.Fragment>
     );
   });
 
-  let primary = <span className="primary_term">
-                  {itemName[0]}
-                </span>;
+
+  let primary;
+
+  if (props.item.parent) {
+    primary = <span className="primary_term">
+                {props.item.parent}/{itemName[0]}
+              </span>;
+  } else {
+    primary = <span className="primary_term">
+                {itemName[0]}
+              </span>;
+  }
 
   let aliases = null;
   if (itemName.length > 1) {
@@ -33,7 +42,8 @@ const SearchResultsItem = (props) => {
   }
 
   return (
-    <li className="search_result_item">
+    <li className="search_result_item"
+      onClick={(e) => props.itemSelected}>
       {primary}
       {aliases}
     </li>
