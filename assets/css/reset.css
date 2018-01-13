@@ -9,6 +9,22 @@ body, html, #app {
   font-weight: 300;
 }
 
-h1, h2, input {
+h1, h2, h3, input {
   font-weight: 300;
+}
+
+h1 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+  padding-top: 10px;
+}
+
+p {
+  font-size: 0.8em;
+  text-align: center;
 }
