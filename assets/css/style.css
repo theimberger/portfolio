@@ -1,18 +1,6 @@
-h1 {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin: 0;
-  padding-top: 10px;
-}
-
 #signature {
   position: fixed;
   font-size: 1.1em;
-  font-weight: 600;
   top: 15px;
   right: 150px;
   letter-spacing: 5px;
@@ -112,4 +100,26 @@ h2 {
   left: 150px;
   bottom: 0;
   overflow: scroll;
+}
+
+#projects_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#projects_wrapper h2 {
+  width: 100%;
+}
+
+.project_tile {
+  border-top: 1px solid grey;
+  width: 40%;
+  display: flex;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
