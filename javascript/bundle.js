@@ -18491,7 +18491,7 @@ var _search_map = __webpack_require__(41);
 
 var _search_map2 = _interopRequireDefault(_search_map);
 
-var _view_port = __webpack_require__(46);
+var _view_port = __webpack_require__(47);
 
 var _view_port2 = _interopRequireDefault(_view_port);
 
@@ -18961,7 +18961,11 @@ var _projects = __webpack_require__(44);
 
 var _projects2 = _interopRequireDefault(_projects);
 
-var _contact = __webpack_require__(45);
+var _skills = __webpack_require__(45);
+
+var _skills2 = _interopRequireDefault(_skills);
+
+var _contact = __webpack_require__(46);
 
 var _contact2 = _interopRequireDefault(_contact);
 
@@ -18971,7 +18975,6 @@ var _profiles2 = _interopRequireDefault(_profiles);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import Index from './other/index.jsx';
 var SearchMap = [{
   terms: ["about me", "bio"],
   parent: false,
@@ -19011,13 +19014,13 @@ var SearchMap = [{
 }, {
   terms: ["skills", "languages"],
   parent: false,
-  component: "./work/skills.jsx"
+  component: _skills2.default
 }, {
   terms: ["wikipedia crawler"],
   parent: "projects",
   component: _project2.default
 }];
-
+// import Index from './other/index.jsx';
 exports.default = SearchMap;
 
 /***/ }),
@@ -19186,6 +19189,44 @@ var _pure = __webpack_require__(2);
 
 var _pure2 = _interopRequireDefault(_pure);
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Skills = function Skills(props) {
+  return _react2.default.createElement(
+    _react2.default.Fragment,
+    null,
+    _react2.default.createElement('br', null),
+    'JavaScipt (ES6, React.js / Redux, D3.js)',
+    _react2.default.createElement('br', null),
+    'Ruby (Ruby on Rails)',
+    _react2.default.createElement('br', null),
+    'HTML 5',
+    _react2.default.createElement('br', null),
+    'CSS 3'
+  );
+};
+
+exports.default = (0, _pure2.default)(Skills);
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(2);
+
+var _pure2 = _interopRequireDefault(_pure);
+
 var _profiles = __webpack_require__(18);
 
 var _profiles2 = _interopRequireDefault(_profiles);
@@ -19212,7 +19253,7 @@ var Contact = function Contact(props) {
         _react2.default.createElement('br', null),
         _react2.default.createElement(
           'a',
-          null,
+          { href: 'mailto:theimberger@gmail.com' },
           'theimberger@gmail.com'
         )
       ),
@@ -19223,7 +19264,7 @@ var Contact = function Contact(props) {
         _react2.default.createElement('br', null),
         _react2.default.createElement(
           'a',
-          null,
+          { href: 'tel:1-443-370-7866' },
           '(443) 370 7866'
         )
       )
@@ -19235,7 +19276,7 @@ var Contact = function Contact(props) {
 exports.default = (0, _pure2.default)(Contact);
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

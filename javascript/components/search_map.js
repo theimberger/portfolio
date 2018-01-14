@@ -2,6 +2,7 @@ import About from './other/about.jsx';
 // import Index from './other/index.jsx';
 import Project from './work/project.jsx';
 import Projects from './work/projects.jsx';
+import Skills from './work/skills.jsx';
 import Contact from './contact/contact.jsx';
 import Profiles from './contact/profiles.jsx';
 
@@ -55,7 +56,7 @@ const SearchMap = [
   {
     terms: ["skills", "languages"],
     parent: false,
-    component: "./work/skills.jsx"
+    component: Skills
   },
   {
     terms: ["wikipedia crawler"],

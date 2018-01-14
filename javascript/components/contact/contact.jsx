@@ -11,12 +11,12 @@ const Contact = (props) => {
         <li>
           email
           <br />
-          <a>theimberger@gmail.com</a>
+          <a href="mailto:theimberger@gmail.com">theimberger@gmail.com</a>
         </li>
         <li>
           phone (mobile)
           <br />
-          <a>(443) 370 7866</a>
+          <a href="tel:1-443-370-7866">(443) 370 7866</a>
         </li>
       </ul>
       <Profiles />
