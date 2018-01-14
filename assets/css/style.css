@@ -123,3 +123,22 @@
   justify-content: space-around;
   align-items: center;
 }
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 20px;
+}
+
+a {
+  color: lightgrey;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+a:hover {
+  color: black;
+}
