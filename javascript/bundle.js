@@ -1083,7 +1083,7 @@ var Profiles = function Profiles(props) {
     _react2.default.createElement(
       'h2',
       null,
-      'Profiles'
+      'profiles'
     ),
     _react2.default.createElement('hr', null),
     _react2.default.createElement(
@@ -1096,6 +1096,7 @@ var Profiles = function Profiles(props) {
           'a',
           { href: 'https://www.linkedin.com/in/thomas-heimberger-46b255141/',
             target: '_blank' },
+          _react2.default.createElement('img', { src: './assets/images/linkedin.png' }),
           'LinkedIn'
         )
       ),
@@ -1106,7 +1107,19 @@ var Profiles = function Profiles(props) {
           'a',
           { href: 'https://github.com/theimberger',
             target: '_blank' },
+          _react2.default.createElement('img', { src: './assets/images/github.png' }),
           'GitHub'
+        )
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
+        _react2.default.createElement(
+          'a',
+          { href: 'https://angel.co/thomas-heimberger',
+            target: '_blank' },
+          _react2.default.createElement('img', { src: './assets/images/angellist.png' }),
+          'AngelList'
         )
       )
     )

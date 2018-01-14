@@ -4,19 +4,28 @@ import pure from 'recompose/pure';
 const Profiles = (props) => {
   return (
     <React.Fragment>
-      <h2>Profiles</h2>
+      <h2>profiles</h2>
       <hr />
       <ul>
         <li>
           <a href="https://www.linkedin.com/in/thomas-heimberger-46b255141/"
             target="_blank">
+            <img src="./assets/images/linkedin.png" />
             LinkedIn
           </a>
         </li>
         <li>
           <a href="https://github.com/theimberger"
             target="_blank">
+            <img src="./assets/images/github.png" />
             GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://angel.co/thomas-heimberger"
+            target="_blank">
+            <img src="./assets/images/angellist.png" />
+            AngelList
           </a>
         </li>
       </ul>
