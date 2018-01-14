@@ -10,10 +10,16 @@ const Contact = (props) => {
       <ul>
         <li>
           email
-          <hr />
-          tlheimberger@smcm.edu
+          <br />
+          <a>theimberger@gmail.com</a>
+        </li>
+        <li>
+          phone (mobile)
+          <br />
+          <a>(443) 370 7866</a>
         </li>
       </ul>
+      <Profiles />
     </ React.Fragment>
   );
 };

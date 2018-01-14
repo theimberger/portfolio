@@ -1078,9 +1078,38 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Profiles = function Profiles(props) {
   return _react2.default.createElement(
-    'div',
+    _react2.default.Fragment,
     null,
-    'this is a profile page'
+    _react2.default.createElement(
+      'h2',
+      null,
+      'Profiles'
+    ),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'ul',
+      null,
+      _react2.default.createElement(
+        'li',
+        null,
+        _react2.default.createElement(
+          'a',
+          { href: 'https://www.linkedin.com/in/thomas-heimberger-46b255141/',
+            target: '_blank' },
+          'LinkedIn'
+        )
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
+        _react2.default.createElement(
+          'a',
+          { href: 'https://github.com/theimberger',
+            target: '_blank' },
+          'GitHub'
+        )
+      )
+    )
   );
 };
 
@@ -19167,10 +19196,26 @@ var Contact = function Contact(props) {
         'li',
         null,
         'email',
-        _react2.default.createElement('hr', null),
-        'tlheimberger@smcm.edu'
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          null,
+          'theimberger@gmail.com'
+        )
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
+        'phone (mobile)',
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          'a',
+          null,
+          '(443) 370 7866'
+        )
       )
-    )
+    ),
+    _react2.default.createElement(_profiles2.default, null)
   );
 };
 
