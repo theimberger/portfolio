@@ -160,3 +160,13 @@ a:hover img {
   flex-direction: column;
   align-items: center;
 }
+
+.skill {
+  font-size: 0.8em;
+  text-align: center;
+  border: none;
+  width: 25%;
+}
+.skill i {
+  font-size: 3em;
+}
