@@ -1,11 +1,14 @@
 import About from './other/about.jsx';
 // import Index from './other/index.jsx';
-import Project from './work/project.jsx';
+
 import Experience from './experience/experience.jsx';
 import Education from './experience/education.jsx';
 import Employment from './experience/employment.jsx';
+import Skills from './experience/skills.jsx';
+
+import Project from './work/project.jsx';
 import Projects from './work/projects.jsx';
-import Skills from './work/skills.jsx';
+
 import Contact from './contact/contact.jsx';
 import Profiles from './contact/profiles.jsx';
 
@@ -68,7 +71,7 @@ const SearchMap = [
   },
   {
     terms: ["skills", "languages"],
-    parent: false,
+    parent: "experience",
     component: Skills
   },
   {

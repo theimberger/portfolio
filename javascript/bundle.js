@@ -18954,10 +18954,6 @@ var _about = __webpack_require__(43);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _project = __webpack_require__(44);
-
-var _project2 = _interopRequireDefault(_project);
-
 var _experience = __webpack_require__(53);
 
 var _experience2 = _interopRequireDefault(_experience);
@@ -18970,13 +18966,17 @@ var _employment = __webpack_require__(52);
 
 var _employment2 = _interopRequireDefault(_employment);
 
+var _skills = __webpack_require__(54);
+
+var _skills2 = _interopRequireDefault(_skills);
+
+var _project = __webpack_require__(44);
+
+var _project2 = _interopRequireDefault(_project);
+
 var _projects = __webpack_require__(46);
 
 var _projects2 = _interopRequireDefault(_projects);
-
-var _skills = __webpack_require__(47);
-
-var _skills2 = _interopRequireDefault(_skills);
 
 var _contact = __webpack_require__(48);
 
@@ -18989,6 +18989,7 @@ var _profiles2 = _interopRequireDefault(_profiles);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import Index from './other/index.jsx';
+
 var SearchMap = [{
   terms: ["about me", "bio"],
   parent: false,
@@ -19035,7 +19036,7 @@ var SearchMap = [{
   component: _project2.default
 }, {
   terms: ["skills", "languages"],
-  parent: false,
+  parent: "experience",
   component: _skills2.default
 }, {
   terms: ["wikipedia crawler"],
@@ -19189,44 +19190,7 @@ var Projects = function Projects(props) {
 exports.default = (0, _pure2.default)(Projects);
 
 /***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _pure = __webpack_require__(1);
-
-var _pure2 = _interopRequireDefault(_pure);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Skills = function Skills(props) {
-  return _react2.default.createElement(
-    _react2.default.Fragment,
-    null,
-    _react2.default.createElement('br', null),
-    'JavaScipt (ES6, React.js / Redux, D3.js)',
-    _react2.default.createElement('br', null),
-    'Ruby (Ruby on Rails)',
-    _react2.default.createElement('br', null),
-    'HTML 5',
-    _react2.default.createElement('br', null),
-    'CSS 3'
-  );
-};
-
-exports.default = (0, _pure2.default)(Skills);
-
-/***/ }),
+/* 47 */,
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19526,6 +19490,10 @@ var _employment = __webpack_require__(52);
 
 var _employment2 = _interopRequireDefault(_employment);
 
+var _skills = __webpack_require__(54);
+
+var _skills2 = _interopRequireDefault(_skills);
+
 var _pure = __webpack_require__(1);
 
 var _pure2 = _interopRequireDefault(_pure);
@@ -19539,20 +19507,118 @@ var Projects = function Projects(props) {
     _react2.default.createElement(
       'h2',
       null,
-      'education'
+      '/skills'
+    ),
+    _react2.default.createElement(_skills2.default, null),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'h2',
+      null,
+      '/education'
     ),
     _react2.default.createElement(_education2.default, null),
     _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'h2',
       null,
-      'employment'
+      '/employment'
     ),
     _react2.default.createElement(_employment2.default, null)
   );
 };
 
 exports.default = (0, _pure2.default)(Projects);
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Skills = function Skills(props) {
+  return _react2.default.createElement(
+    _react2.default.Fragment,
+    null,
+    _react2.default.createElement(
+      'section',
+      { className: 'wrapper' },
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-d3js-plain colored' }),
+        _react2.default.createElement('br', null),
+        'D3.js'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-github-plain colored' }),
+        _react2.default.createElement('br', null),
+        'GitHub'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-css3-plain colored' }),
+        _react2.default.createElement('br', null),
+        'CSS3'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-html5-plain colored' }),
+        _react2.default.createElement('br', null),
+        'HTML 5'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-javascript-plain colored' }),
+        _react2.default.createElement('br', null),
+        'JavaScript (es6)'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-react-plain colored' }),
+        _react2.default.createElement('br', null),
+        'React.js'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-ruby-plain colored' }),
+        _react2.default.createElement('br', null),
+        'Ruby'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-rails-plain colored' }),
+        _react2.default.createElement('br', null),
+        'Rails'
+      )
+    )
+  );
+};
+
+exports.default = (0, _pure2.default)(Skills);
 
 /***/ })
 /******/ ]);
