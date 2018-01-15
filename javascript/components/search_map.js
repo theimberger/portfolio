@@ -1,6 +1,7 @@
 import About from './other/about.jsx';
 // import Index from './other/index.jsx';
 import Project from './work/project.jsx';
+import Experience from './work/experience.jsx';
 import Projects from './work/projects.jsx';
 import Skills from './work/skills.jsx';
 import Contact from './contact/contact.jsx';
@@ -21,7 +22,7 @@ const SearchMap = [
   {
     terms: ["experience", "resume", "work history", "background"],
     parent: false,
-    component: "./work/experience.jsx"
+    component: Experience
   },
   {
     terms: ["index", "all"],
