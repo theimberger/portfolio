@@ -103,18 +103,18 @@
   overflow: scroll;
 }
 
-#projects_wrapper {
+.wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
 
-#projects_wrapper h2 {
+.wrapper h2 {
   width: 100%;
 }
 
-.project_tile {
+.tile {
   border-top: 1px solid grey;
   width: 40%;
   display: flex;
@@ -154,4 +154,9 @@ a:hover {
 
 a:hover img {
   opacity: 1;
+}
+
+.experience {
+  flex-direction: column;
+  align-items: center;
 }
