@@ -4,7 +4,7 @@ import Employment from './employment';
 import Skills from './skills';
 import pure from 'recompose/pure';
 
-const Projects = (props) => {
+const Projects = () => {
   return (
     <React.Fragment>
       <h2>/skills</h2>

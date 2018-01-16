@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 23);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,9 +71,9 @@
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(21);
+  module.exports = __webpack_require__(24);
 } else {
-  module.exports = __webpack_require__(22);
+  module.exports = __webpack_require__(25);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
@@ -87,11 +87,11 @@ if (process.env.NODE_ENV === 'production') {
 
 exports.__esModule = true;
 
-var _shouldUpdate = __webpack_require__(36);
+var _shouldUpdate = __webpack_require__(39);
 
 var _shouldUpdate2 = _interopRequireDefault(_shouldUpdate);
 
-var _shallowEqual = __webpack_require__(39);
+var _shallowEqual = __webpack_require__(42);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
@@ -690,7 +690,7 @@ module.exports = shallowEqual;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(6);
   var warning = __webpack_require__(7);
-  var ReactPropTypesSecret = __webpack_require__(23);
+  var ReactPropTypesSecret = __webpack_require__(26);
   var loggedTypeFailures = {};
 }
 
@@ -918,7 +918,7 @@ module.exports = getActiveElement;
  * 
  */
 
-var isTextNode = __webpack_require__(26);
+var isTextNode = __webpack_require__(29);
 
 /*eslint-disable no-bitwise */
 
@@ -984,7 +984,7 @@ module.exports = focusNode;
 
 exports.__esModule = true;
 
-var _setStatic = __webpack_require__(37);
+var _setStatic = __webpack_require__(40);
 
 var _setStatic2 = _interopRequireDefault(_setStatic);
 
@@ -1005,7 +1005,7 @@ exports.default = setDisplayName;
 
 exports.__esModule = true;
 
-var _getDisplayName = __webpack_require__(38);
+var _getDisplayName = __webpack_require__(41);
 
 var _getDisplayName2 = _interopRequireDefault(_getDisplayName);
 
@@ -1056,8 +1056,304 @@ var toggleActiveSearch = exports.toggleActiveSearch = function toggleActiveSearc
 };
 
 /***/ }),
-/* 18 */,
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Education = function Education() {
+  return _react2.default.createElement(
+    'section',
+    { className: 'wrapper experience' },
+    _react2.default.createElement(
+      'section',
+      { className: 'tile' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        'App Academy'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'A 1,000+ hour coding intensive program, with an ',
+        "<",
+        '2% acceptance rate.'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'September 2017 - November 2017'
+      )
+    ),
+    _react2.default.createElement(
+      'section',
+      { className: 'tile' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        'St. Mary\'s College of Maryland'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'A small pubic honors college in southern Maryland.  Graduated with a Bachelor of Arts (majoring in Biology and Philosophy).'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'August 2010 - May 2015'
+      )
+    ),
+    _react2.default.createElement(
+      'section',
+      { className: 'tile' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        'NOLS New Zealand'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'A program promoting wilderness and leadership skills.  Was elected by my peers to lead an expidention in the Southern Alps of NZ.'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'April 2010 - June 2010'
+      )
+    )
+  );
+};
+
+exports.default = (0, _pure2.default)(Education);
+
+/***/ }),
 /* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Employment = function Employment() {
+  return _react2.default.createElement(
+    'section',
+    { className: 'wrapper experience' },
+    _react2.default.createElement(
+      'section',
+      { className: 'tile' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        'Old Fox Books and Coffeehouse'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'Helped set up and create a web presence of Annapolis\' local bookstore, Old Fox Books.  Assisted in the creation of a wordpress website.'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'October 2016 - August 2017'
+      )
+    ),
+    _react2.default.createElement(
+      'section',
+      { className: 'tile' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        'Dawson\'s Liqours'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'Helped manage and organize an inventory of more than 400 beers. Provided customer servie and recommendations.'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'October 2015 - April 2016'
+      )
+    ),
+    _react2.default.createElement(
+      'section',
+      { className: 'tile' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        'Scribe America'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'Worked side-by-side with ER physicians, providing deep and accurate patient records in high pressure environments while maintaining a high quality of work'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'June 2014 - October 2015'
+      )
+    )
+  );
+};
+
+exports.default = (0, _pure2.default)(Employment);
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Skills = function Skills(props) {
+  return _react2.default.createElement(
+    _react2.default.Fragment,
+    null,
+    _react2.default.createElement(
+      'section',
+      { className: 'wrapper' },
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-javascript-plain colored' }),
+        _react2.default.createElement('br', null),
+        'JavaScript (es6)'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-react-plain colored' }),
+        _react2.default.createElement('br', null),
+        'React.js'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-d3js-plain colored' }),
+        _react2.default.createElement('br', null),
+        'D3.js'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-ruby-plain colored' }),
+        _react2.default.createElement('br', null),
+        'Ruby'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-rails-plain colored' }),
+        _react2.default.createElement('br', null),
+        'Rails'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-html5-plain colored' }),
+        _react2.default.createElement('br', null),
+        'HTML 5'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-css3-plain colored' }),
+        _react2.default.createElement('br', null),
+        'CSS3'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'skill tile' },
+        _react2.default.createElement('i', { className: 'devicon-github-plain colored' }),
+        _react2.default.createElement('br', null),
+        'GitHub'
+      )
+    )
+  );
+};
+
+exports.default = (0, _pure2.default)(Skills);
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Project = function Project(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    'this is a project page'
+  );
+};
+
+exports.default = (0, _pure2.default)(Project);
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1130,7 +1426,7 @@ var Profiles = function Profiles(props) {
 exports.default = (0, _pure2.default)(Profiles);
 
 /***/ }),
-/* 20 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1140,11 +1436,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(24);
+var _reactDom = __webpack_require__(27);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _root = __webpack_require__(33);
+var _root = __webpack_require__(36);
 
 var _root2 = _interopRequireDefault(_root);
 
@@ -1156,7 +1452,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /***/ }),
-/* 21 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1184,7 +1480,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 22 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2549,7 +2845,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 23 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2568,7 +2864,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 24 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2606,15 +2902,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(25);
-} else {
   module.exports = __webpack_require__(28);
+} else {
+  module.exports = __webpack_require__(31);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 25 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2850,7 +3146,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 
 
 /***/ }),
-/* 26 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2865,7 +3161,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
  * @typechecks
  */
 
-var isNode = __webpack_require__(27);
+var isNode = __webpack_require__(30);
 
 /**
  * @param {*} object The object to check.
@@ -2878,7 +3174,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 27 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2906,7 +3202,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 28 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2940,8 +3236,8 @@ var containsNode = __webpack_require__(13);
 var focusNode = __webpack_require__(14);
 var emptyObject = __webpack_require__(5);
 var checkPropTypes = __webpack_require__(9);
-var hyphenateStyleName = __webpack_require__(29);
-var camelizeStyleName = __webpack_require__(31);
+var hyphenateStyleName = __webpack_require__(32);
+var camelizeStyleName = __webpack_require__(34);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -18308,7 +18604,7 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 29 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18323,7 +18619,7 @@ module.exports = reactDom;
 
 
 
-var hyphenate = __webpack_require__(30);
+var hyphenate = __webpack_require__(33);
 
 var msPattern = /^ms-/;
 
@@ -18350,7 +18646,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 30 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18386,7 +18682,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 31 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18401,7 +18697,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(32);
+var camelize = __webpack_require__(35);
 
 var msPattern = /^-ms-/;
 
@@ -18429,7 +18725,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 32 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18464,7 +18760,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 33 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18480,19 +18776,19 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _signature = __webpack_require__(34);
+var _signature = __webpack_require__(37);
 
 var _signature2 = _interopRequireDefault(_signature);
 
-var _search_container = __webpack_require__(35);
+var _search_container = __webpack_require__(38);
 
 var _search_container2 = _interopRequireDefault(_search_container);
 
-var _search_map = __webpack_require__(42);
+var _search_map = __webpack_require__(45);
 
 var _search_map2 = _interopRequireDefault(_search_map);
 
-var _view_port = __webpack_require__(49);
+var _view_port = __webpack_require__(50);
 
 var _view_port2 = _interopRequireDefault(_view_port);
 
@@ -18552,6 +18848,7 @@ var Root = function (_React$Component) {
     key: 'itemSelectHandler',
     value: function itemSelectHandler(item) {
       var newState = this.state;
+      $("#search").blur();
       newState.pageRendered = _react2.default.createElement(item.component, null);
       newState.searchValue = item.terms[0];
       this.setState(newState);
@@ -18580,7 +18877,7 @@ var Root = function (_React$Component) {
 exports.default = Root;
 
 /***/ }),
-/* 34 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18607,7 +18904,7 @@ var Signature = function Signature() {
 exports.default = Signature;
 
 /***/ }),
-/* 35 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18625,7 +18922,7 @@ var _pure = __webpack_require__(1);
 
 var _pure2 = _interopRequireDefault(_pure);
 
-var _search_results = __webpack_require__(40);
+var _search_results = __webpack_require__(43);
 
 var _search_results2 = _interopRequireDefault(_search_results);
 
@@ -18634,6 +18931,11 @@ var _ui_utils = __webpack_require__(17);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SearchContainer = function SearchContainer(props) {
+
+  var submitHandler = function submitHandler(e) {
+    e.preventDefault();
+    props.itemSelectHandler(props.results[0]);
+  };
 
   return _react2.default.createElement(
     'div',
@@ -18653,18 +18955,23 @@ var SearchContainer = function SearchContainer(props) {
       null,
       'Just type what you\'re looking for below.'
     ),
-    _react2.default.createElement('input', {
-      id: 'search',
-      autoComplete: 'off',
-      value: props.searchValue,
-      onChange: props.update,
-      onFocus: function onFocus() {
-        return (0, _ui_utils.toggleActiveSearch)();
-      },
-      onBlur: function onBlur() {
-        return (0, _ui_utils.toggleActiveSearch)();
-      }
-    }),
+    _react2.default.createElement(
+      'form',
+      {
+        onSubmit: submitHandler },
+      _react2.default.createElement('input', {
+        id: 'search',
+        autoComplete: 'off',
+        value: props.searchValue,
+        onChange: props.update,
+        onFocus: function onFocus() {
+          return (0, _ui_utils.toggleActiveSearch)();
+        },
+        onBlur: function onBlur() {
+          return (0, _ui_utils.toggleActiveSearch)();
+        }
+      })
+    ),
     _react2.default.createElement('hr', { className: 'search_line' }),
     _react2.default.createElement(_search_results2.default, {
       itemSelectHandler: props.itemSelectHandler,
@@ -18677,7 +18984,7 @@ var SearchContainer = function SearchContainer(props) {
 exports.default = (0, _pure2.default)(SearchContainer);
 
 /***/ }),
-/* 36 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18738,7 +19045,7 @@ exports.default = shouldUpdate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 37 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18757,7 +19064,7 @@ var setStatic = function setStatic(key, value) {
 exports.default = setStatic;
 
 /***/ }),
-/* 38 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18779,7 +19086,7 @@ var getDisplayName = function getDisplayName(Component) {
 exports.default = getDisplayName;
 
 /***/ }),
-/* 39 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18796,7 +19103,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _shallowEqual2.default;
 
 /***/ }),
-/* 40 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18814,7 +19121,7 @@ var _pure = __webpack_require__(1);
 
 var _pure2 = _interopRequireDefault(_pure);
 
-var _search_results_item = __webpack_require__(41);
+var _search_results_item = __webpack_require__(44);
 
 var _search_results_item2 = _interopRequireDefault(_search_results_item);
 
@@ -18846,7 +19153,7 @@ var SearchResults = function SearchResults(props) {
 exports.default = (0, _pure2.default)(SearchResults);
 
 /***/ }),
-/* 41 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18940,7 +19247,7 @@ var SearchResultsItem = function SearchResultsItem(props) {
 exports.default = (0, _pure2.default)(SearchResultsItem);
 
 /***/ }),
-/* 42 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18950,39 +19257,39 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _about = __webpack_require__(43);
+var _about = __webpack_require__(46);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _experience = __webpack_require__(53);
+var _experience = __webpack_require__(47);
 
 var _experience2 = _interopRequireDefault(_experience);
 
-var _education = __webpack_require__(51);
+var _education = __webpack_require__(18);
 
 var _education2 = _interopRequireDefault(_education);
 
-var _employment = __webpack_require__(52);
+var _employment = __webpack_require__(19);
 
 var _employment2 = _interopRequireDefault(_employment);
 
-var _skills = __webpack_require__(54);
+var _skills = __webpack_require__(20);
 
 var _skills2 = _interopRequireDefault(_skills);
 
-var _project = __webpack_require__(44);
+var _project = __webpack_require__(21);
 
 var _project2 = _interopRequireDefault(_project);
 
-var _projects = __webpack_require__(46);
+var _projects = __webpack_require__(48);
 
 var _projects2 = _interopRequireDefault(_projects);
 
-var _contact = __webpack_require__(48);
+var _contact = __webpack_require__(49);
 
 var _contact2 = _interopRequireDefault(_contact);
 
-var _profiles = __webpack_require__(19);
+var _profiles = __webpack_require__(22);
 
 var _profiles2 = _interopRequireDefault(_profiles);
 
@@ -19047,7 +19354,7 @@ var SearchMap = [{
 exports.default = SearchMap;
 
 /***/ }),
-/* 43 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19078,7 +19385,7 @@ var About = function About(props) {
 exports.default = (0, _pure2.default)(About);
 
 /***/ }),
-/* 44 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19092,105 +19399,55 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _education = __webpack_require__(18);
+
+var _education2 = _interopRequireDefault(_education);
+
+var _employment = __webpack_require__(19);
+
+var _employment2 = _interopRequireDefault(_employment);
+
+var _skills = __webpack_require__(20);
+
+var _skills2 = _interopRequireDefault(_skills);
+
 var _pure = __webpack_require__(1);
 
 var _pure2 = _interopRequireDefault(_pure);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Project = function Project(props) {
+var Projects = function Projects() {
   return _react2.default.createElement(
-    'div',
+    _react2.default.Fragment,
     null,
-    'this is a project page'
-  );
-};
-
-exports.default = (0, _pure2.default)(Project);
-
-/***/ }),
-/* 45 */,
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _pure = __webpack_require__(1);
-
-var _pure2 = _interopRequireDefault(_pure);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Projects = function Projects(props) {
-  return _react2.default.createElement(
-    'section',
-    { className: 'wrapper' },
     _react2.default.createElement(
-      'section',
-      { className: 'tile' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'relax'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'A clone of the workplace chat application, Slack.',
-        _react2.default.createElement('br', null),
-        'Primary skills: Ruby/Rails, React/Redux'
-      )
+      'h2',
+      null,
+      '/skills'
     ),
+    _react2.default.createElement(_skills2.default, null),
+    _react2.default.createElement('br', null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
-      'section',
-      { className: 'tile' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'wikipedia crawler'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'A data visualization game that maps connections between Wikipedia articles.',
-        _react2.default.createElement('br', null),
-        'Primary skills: Ruby/Rails, React/Redux'
-      )
+      'h2',
+      null,
+      '/education'
     ),
+    _react2.default.createElement(_education2.default, null),
+    _react2.default.createElement('hr', null),
     _react2.default.createElement(
-      'section',
-      { className: 'tile' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'shiftFour'
-      )
+      'h2',
+      null,
+      '/employment'
     ),
-    _react2.default.createElement(
-      'section',
-      { className: 'tile' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'the name hall of fame'
-      )
-    )
+    _react2.default.createElement(_employment2.default, null)
   );
 };
 
 exports.default = (0, _pure2.default)(Projects);
 
 /***/ }),
-/* 47 */,
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19205,11 +19462,65 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _project = __webpack_require__(21);
+
+var _project2 = _interopRequireDefault(_project);
+
 var _pure = __webpack_require__(1);
 
 var _pure2 = _interopRequireDefault(_pure);
 
-var _profiles = __webpack_require__(19);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Projects = function Projects(props) {
+  return _react2.default.createElement(
+    _react2.default.Fragment,
+    null,
+    _react2.default.createElement(
+      'h2',
+      null,
+      '/wikipedia crawler'
+    ),
+    _react2.default.createElement(_project2.default, null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'h2',
+      null,
+      '/relax'
+    ),
+    _react2.default.createElement(_project2.default, null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'h2',
+      null,
+      '/the name hall of fame'
+    ),
+    _react2.default.createElement(_project2.default, null)
+  );
+};
+
+exports.default = (0, _pure2.default)(Projects);
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+var _profiles = __webpack_require__(22);
 
 var _profiles2 = _interopRequireDefault(_profiles);
 
@@ -19258,7 +19569,7 @@ var Contact = function Contact(props) {
 exports.default = (0, _pure2.default)(Contact);
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19289,336 +19600,6 @@ var ViewPort = function ViewPort(props) {
 };
 
 exports.default = (0, _pure2.default)(ViewPort);
-
-/***/ }),
-/* 50 */,
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _pure = __webpack_require__(1);
-
-var _pure2 = _interopRequireDefault(_pure);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Education = function Education(props) {
-  return _react2.default.createElement(
-    'section',
-    { className: 'wrapper experience' },
-    _react2.default.createElement(
-      'section',
-      { className: 'tile' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'App Academy'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'A 1,000+ hour coding intensive program, with an ',
-        "<",
-        '2% acceptance rate.'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'September 2017 - November 2017'
-      )
-    ),
-    _react2.default.createElement(
-      'section',
-      { className: 'tile' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'St. Mary\'s College of Maryland'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'A small pubic honors college in southern Maryland.  Graduated with a Bachelor of Arts (majoring in Biology and Philosophy).'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'August 2010 - May 2015'
-      )
-    ),
-    _react2.default.createElement(
-      'section',
-      { className: 'tile' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'NOLS New Zealand'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'A program promoting wilderness and leadership skills.  Was elected by my peers to lead an expidention in the Southern Alps of NZ.'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'April 2010 - June 2010'
-      )
-    )
-  );
-};
-
-exports.default = (0, _pure2.default)(Education);
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _pure = __webpack_require__(1);
-
-var _pure2 = _interopRequireDefault(_pure);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Employment = function Employment(props) {
-  return _react2.default.createElement(
-    'section',
-    { className: 'wrapper experience' },
-    _react2.default.createElement(
-      'section',
-      { className: 'tile' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'Old Fox Books and Coffeehouse'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'Helped set up and create a web presence of Annapolis\' local bookstore, Old Fox Books.  Assisted in the creation of a wordpress website.'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'October 2016 - August 2017'
-      )
-    ),
-    _react2.default.createElement(
-      'section',
-      { className: 'tile' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'Dawson\'s Liqours'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'Helped manage and organize an inventory of more than 400 beers. Provided customer servie and recommendations.'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'October 2015 - April 2016'
-      )
-    ),
-    _react2.default.createElement(
-      'section',
-      { className: 'tile' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'Scribe America'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'Worked side-by-side with ER physicians, providing deep and accurate patient records in high pressure environments while maintaining a high quality of work'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'June 2014 - October 2015'
-      )
-    )
-  );
-};
-
-exports.default = (0, _pure2.default)(Employment);
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _education = __webpack_require__(51);
-
-var _education2 = _interopRequireDefault(_education);
-
-var _employment = __webpack_require__(52);
-
-var _employment2 = _interopRequireDefault(_employment);
-
-var _skills = __webpack_require__(54);
-
-var _skills2 = _interopRequireDefault(_skills);
-
-var _pure = __webpack_require__(1);
-
-var _pure2 = _interopRequireDefault(_pure);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Projects = function Projects(props) {
-  return _react2.default.createElement(
-    _react2.default.Fragment,
-    null,
-    _react2.default.createElement(
-      'h2',
-      null,
-      '/skills'
-    ),
-    _react2.default.createElement(_skills2.default, null),
-    _react2.default.createElement('br', null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'h2',
-      null,
-      '/education'
-    ),
-    _react2.default.createElement(_education2.default, null),
-    _react2.default.createElement('hr', null),
-    _react2.default.createElement(
-      'h2',
-      null,
-      '/employment'
-    ),
-    _react2.default.createElement(_employment2.default, null)
-  );
-};
-
-exports.default = (0, _pure2.default)(Projects);
-
-/***/ }),
-/* 54 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _pure = __webpack_require__(1);
-
-var _pure2 = _interopRequireDefault(_pure);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Skills = function Skills(props) {
-  return _react2.default.createElement(
-    _react2.default.Fragment,
-    null,
-    _react2.default.createElement(
-      'section',
-      { className: 'wrapper' },
-      _react2.default.createElement(
-        'div',
-        { className: 'skill tile' },
-        _react2.default.createElement('i', { className: 'devicon-d3js-plain colored' }),
-        _react2.default.createElement('br', null),
-        'D3.js'
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'skill tile' },
-        _react2.default.createElement('i', { className: 'devicon-github-plain colored' }),
-        _react2.default.createElement('br', null),
-        'GitHub'
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'skill tile' },
-        _react2.default.createElement('i', { className: 'devicon-css3-plain colored' }),
-        _react2.default.createElement('br', null),
-        'CSS3'
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'skill tile' },
-        _react2.default.createElement('i', { className: 'devicon-html5-plain colored' }),
-        _react2.default.createElement('br', null),
-        'HTML 5'
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'skill tile' },
-        _react2.default.createElement('i', { className: 'devicon-javascript-plain colored' }),
-        _react2.default.createElement('br', null),
-        'JavaScript (es6)'
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'skill tile' },
-        _react2.default.createElement('i', { className: 'devicon-react-plain colored' }),
-        _react2.default.createElement('br', null),
-        'React.js'
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'skill tile' },
-        _react2.default.createElement('i', { className: 'devicon-ruby-plain colored' }),
-        _react2.default.createElement('br', null),
-        'Ruby'
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'skill tile' },
-        _react2.default.createElement('i', { className: 'devicon-rails-plain colored' }),
-        _react2.default.createElement('br', null),
-        'Rails'
-      )
-    )
-  );
-};
-
-exports.default = (0, _pure2.default)(Skills);
 
 /***/ })
 /******/ ]);

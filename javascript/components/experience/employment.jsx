@@ -1,7 +1,7 @@
 import React from 'react';
 import pure from 'recompose/pure';
 
-const Employment = (props) => {
+const Employment = () => {
   return (
     <section className="wrapper experience">
 
@@ -39,7 +39,7 @@ const Employment = (props) => {
           June 2014 - October 2015
         </p>
       </section>
-      
+
     </section>
   );
 };
