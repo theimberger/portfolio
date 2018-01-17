@@ -2,7 +2,7 @@ export const enterSearchMode = () => {
   let $searchContainer = $("#search_container"),
       $searchLine = $(".search_line");
 
-  let offset = $searchContainer.height() - 55;
+  let offset = $searchContainer.height() - 60;
   offset = "-" + offset + "px";
   $searchContainer.css("top", offset);
   $searchLine.addClass("expanded");

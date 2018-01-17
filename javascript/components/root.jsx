@@ -5,6 +5,8 @@ import SearchMap from './search_map';
 import ViewPort from './view_port';
 import { enterSearchMode } from '../utils/ui_utils';
 
+const IndexItem = SearchMap.filter((item) => item.terms[0] === "index")[0];
+
 class Root extends React.Component {
 
   constructor() {
@@ -12,12 +14,15 @@ class Root extends React.Component {
     this.state = {
       searchValue: "",
       results: [],
-      pageRendered: false
+      pageRendered: false,
+      activeItem: false
     };
 
     this.updateSearch = this.updateSearch.bind(this);
     this.itemSelectHandler = this.itemSelectHandler.bind(this);
+    this.toIndex = this.toIndex.bind(this);
   }
+
 
   updateSearch(e) {
     if (this.state.searchValue === "" && !this.pageRendered) {
@@ -38,9 +43,16 @@ class Root extends React.Component {
           }
         });
       });
+    } else {
+      newState.activeItem = false;
     }
     newState.results = results;
     this.setState(newState);
+  }
+
+  toIndex() {
+    enterSearchMode();
+    this.itemSelectHandler(IndexItem);
   }
 
   itemSelectHandler(item) {
@@ -48,6 +60,7 @@ class Root extends React.Component {
     $("#search").blur();
     newState.pageRendered = <item.component />;
     newState.searchValue = item.terms[0];
+    newState.activeItem = item;
     this.setState(newState);
   }
 
@@ -56,6 +69,8 @@ class Root extends React.Component {
       <React.Fragment>
         <Signature />
         <SearchContainer
+          toIndex={this.toIndex}
+          activeItem={this.state.activeItem}
           update={this.updateSearch}
           results={this.state.results}
           searchValue={this.state.searchValue}

@@ -16,7 +16,6 @@ h1, h2, h3, h4, input {
 h1 {
   font-family: 'Work Sans', sans-serif;
   font-size: 2em;
-  color: darkorange;
 }
 
 h2 {
@@ -28,4 +27,20 @@ h2 {
 p {
   font-size: 0.8em;
   text-align: center;
+}
+
+#view_port {
+  position: fixed;
+  top: 60px;
+  right: 150px;
+  left: 150px;
+  bottom: 0;
+  overflow: scroll;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
 }
