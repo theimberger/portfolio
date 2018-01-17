@@ -1119,25 +1119,6 @@ var Education = function Education() {
         null,
         'August 2010 - May 2015'
       )
-    ),
-    _react2.default.createElement(
-      'section',
-      { className: 'tile' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'NOLS New Zealand'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'A program promoting wilderness and leadership skills.  Was elected by my peers to lead an expidention in the Southern Alps of NZ.'
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        'April 2010 - June 2010'
-      )
     )
   );
 };
@@ -1373,16 +1354,10 @@ var _pure2 = _interopRequireDefault(_pure);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Profiles = function Profiles(props) {
+var Profiles = function Profiles() {
   return _react2.default.createElement(
     _react2.default.Fragment,
     null,
-    _react2.default.createElement(
-      'h2',
-      null,
-      'profiles'
-    ),
-    _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'ul',
       null,
@@ -18956,6 +18931,17 @@ var SearchContainer = function SearchContainer(props) {
       'Just type what you\'re looking for below.'
     ),
     _react2.default.createElement(
+      'h4',
+      null,
+      '- or just click',
+      _react2.default.createElement(
+        'span',
+        { className: 'faux' },
+        ' here '
+      ),
+      'to see everything at once -'
+    ),
+    _react2.default.createElement(
       'form',
       {
         onSubmit: submitHandler },
@@ -19261,6 +19247,10 @@ var _about = __webpack_require__(46);
 
 var _about2 = _interopRequireDefault(_about);
 
+var _index = __webpack_require__(53);
+
+var _index2 = _interopRequireDefault(_index);
+
 var _experience = __webpack_require__(47);
 
 var _experience2 = _interopRequireDefault(_experience);
@@ -19276,6 +19266,10 @@ var _employment2 = _interopRequireDefault(_employment);
 var _skills = __webpack_require__(20);
 
 var _skills2 = _interopRequireDefault(_skills);
+
+var _additional = __webpack_require__(52);
+
+var _additional2 = _interopRequireDefault(_additional);
 
 var _project = __webpack_require__(21);
 
@@ -19293,18 +19287,19 @@ var _profiles = __webpack_require__(22);
 
 var _profiles2 = _interopRequireDefault(_profiles);
 
+var _email = __webpack_require__(51);
+
+var _email2 = _interopRequireDefault(_email);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import Index from './other/index.jsx';
+var SearchMap = [
 
-var SearchMap = [{
-  terms: ["about me", "bio"],
+// experience
+{
+  terms: ["experience", "resume", "background"],
   parent: false,
-  component: _about2.default
-}, {
-  terms: ["contact"],
-  parent: false,
-  component: _contact2.default
+  component: _experience2.default
 }, {
   terms: ["education"],
   parent: "experience",
@@ -19314,25 +19309,24 @@ var SearchMap = [{
   parent: "experience",
   component: _employment2.default
 }, {
-  terms: ["experience", "resume", "background"],
-  parent: false,
-  component: _experience2.default
+  terms: ["additional experience"],
+  parent: "experience",
+  component: _additional2.default
 }, {
-  terms: ["index", "all"],
+  terms: ["skills", "languages"],
+  parent: "experience",
+  component: _skills2.default
+},
+
+// projects
+{
+  terms: ["projects", "work", "recent work", "portfolio"],
   parent: false,
-  component: "./other/index.jsx"
+  component: _projects2.default
 }, {
   terms: ["nhof", "name hall of fame"],
   parent: "projects",
   component: _project2.default
-}, {
-  terms: ["profiles", "social media", "links"],
-  parent: "contact",
-  component: _profiles2.default
-}, {
-  terms: ["projects", "work", "recent work", "portfolio"],
-  parent: false,
-  component: _projects2.default
 }, {
   terms: ["relax"],
   parent: "projects",
@@ -19342,13 +19336,35 @@ var SearchMap = [{
   parent: "projects",
   component: _project2.default
 }, {
-  terms: ["skills", "languages"],
-  parent: "experience",
-  component: _skills2.default
-}, {
   terms: ["wikipedia crawler"],
   parent: "projects",
   component: _project2.default
+},
+
+//contact
+{
+  terms: ["contact", "get in touch"],
+  parent: false,
+  component: _contact2.default
+}, {
+  terms: ["profiles", "social media", "links"],
+  parent: "contact",
+  component: _profiles2.default
+}, {
+  terms: ["email & phone", "phone"],
+  parent: "contact",
+  component: _email2.default
+},
+
+//other
+{
+  terms: ["about me", "bio"],
+  parent: false,
+  component: _about2.default
+}, {
+  terms: ["index", "all"],
+  parent: false,
+  component: _index2.default
 }];
 
 exports.default = SearchMap;
@@ -19374,11 +19390,15 @@ var _pure2 = _interopRequireDefault(_pure);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var About = function About(props) {
+var About = function About() {
   return _react2.default.createElement(
-    'div',
+    _react2.default.Fragment,
     null,
-    'this is a about page'
+    _react2.default.createElement(
+      'p',
+      null,
+      'I\'m a 26 year old developer living in NYC (Bushwich at the moment).'
+    )
   );
 };
 
@@ -19411,6 +19431,10 @@ var _skills = __webpack_require__(20);
 
 var _skills2 = _interopRequireDefault(_skills);
 
+var _additional = __webpack_require__(52);
+
+var _additional2 = _interopRequireDefault(_additional);
+
 var _pure = __webpack_require__(1);
 
 var _pure2 = _interopRequireDefault(_pure);
@@ -19441,7 +19465,14 @@ var Projects = function Projects() {
       null,
       '/employment'
     ),
-    _react2.default.createElement(_employment2.default, null)
+    _react2.default.createElement(_employment2.default, null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'h2',
+      null,
+      '/additional'
+    ),
+    _react2.default.createElement(_additional2.default, null)
   );
 };
 
@@ -19524,43 +19555,27 @@ var _profiles = __webpack_require__(22);
 
 var _profiles2 = _interopRequireDefault(_profiles);
 
+var _email = __webpack_require__(51);
+
+var _email2 = _interopRequireDefault(_email);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Contact = function Contact(props) {
+var Contact = function Contact() {
   return _react2.default.createElement(
     _react2.default.Fragment,
     null,
     _react2.default.createElement(
       'h2',
       null,
-      'contact'
+      '/email & phone'
     ),
+    _react2.default.createElement(_email2.default, null),
     _react2.default.createElement('hr', null),
     _react2.default.createElement(
-      'ul',
+      'h2',
       null,
-      _react2.default.createElement(
-        'li',
-        null,
-        'email',
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'a',
-          { href: 'mailto:theimberger@gmail.com' },
-          'theimberger@gmail.com'
-        )
-      ),
-      _react2.default.createElement(
-        'li',
-        null,
-        'phone (mobile)',
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'a',
-          { href: 'tel:1-443-370-7866' },
-          '(443) 370 7866'
-        )
-      )
+      '/profiles'
     ),
     _react2.default.createElement(_profiles2.default, null)
   );
@@ -19600,6 +19615,218 @@ var ViewPort = function ViewPort(props) {
 };
 
 exports.default = (0, _pure2.default)(ViewPort);
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Email = function Email() {
+  return _react2.default.createElement(
+    'ul',
+    null,
+    _react2.default.createElement(
+      'li',
+      null,
+      'email',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'a',
+        { href: 'mailto:theimberger@gmail.com' },
+        'theimberger@gmail.com'
+      )
+    ),
+    _react2.default.createElement(
+      'li',
+      null,
+      'phone (mobile)',
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        'a',
+        { href: 'tel:1-443-370-7866' },
+        '(443) 370 7866'
+      )
+    )
+  );
+};
+
+exports.default = (0, _pure2.default)(Email);
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Additional = function Additional() {
+  return _react2.default.createElement(
+    'section',
+    { className: 'wrapper experience' },
+    _react2.default.createElement(
+      'section',
+      { className: 'tile' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        'Appalachian Trail Thru-Hike'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'Planned and executed a 2,189 mile hike from Georgia to Maine. Almost died twice.  Had the time of my life.'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'April 2016 - September 2017'
+      )
+    ),
+    _react2.default.createElement(
+      'section',
+      { className: 'tile' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        'MDA Summer Camp'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'Worked as a camp counselor for a week long MDA summer camp for three years. MDA summer camp provided children with Muscular Dystrophy the experience of normality, being around peers and people with similar conditions, all while participating in events and activities adapted for their needs. As a camp counselor I was paired one-on-one with a camper and assisted them as they needed and made sure they stayed happy and healthy for the week.'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'July 2013 - July 2015'
+      )
+    ),
+    _react2.default.createElement(
+      'section',
+      { className: 'tile' },
+      _react2.default.createElement(
+        'h3',
+        null,
+        'NOLS New Zealand'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'A program promoting wilderness and leadership skills.  Was elected by my peers to lead an expidention in the Southern Alps of NZ.'
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'April 2010 - June 2010'
+      )
+    )
+  );
+};
+
+exports.default = (0, _pure2.default)(Additional);
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _about = __webpack_require__(46);
+
+var _about2 = _interopRequireDefault(_about);
+
+var _experience = __webpack_require__(47);
+
+var _experience2 = _interopRequireDefault(_experience);
+
+var _projects = __webpack_require__(48);
+
+var _projects2 = _interopRequireDefault(_projects);
+
+var _contact = __webpack_require__(49);
+
+var _contact2 = _interopRequireDefault(_contact);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Index = function Index() {
+  return _react2.default.createElement(
+    _react2.default.Fragment,
+    null,
+    _react2.default.createElement(
+      'h1',
+      null,
+      '/experience'
+    ),
+    _react2.default.createElement(_experience2.default, null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'h1',
+      null,
+      '/projects'
+    ),
+    _react2.default.createElement(_projects2.default, null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'h1',
+      null,
+      '/about'
+    ),
+    _react2.default.createElement(_about2.default, null),
+    _react2.default.createElement('hr', null),
+    _react2.default.createElement(
+      'h1',
+      null,
+      '/contact'
+    ),
+    _react2.default.createElement(_contact2.default, null)
+  );
+};
+
+exports.default = (0, _pure2.default)(Index);
 
 /***/ })
 /******/ ]);

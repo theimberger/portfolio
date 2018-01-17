@@ -27,17 +27,6 @@ const Education = () => {
         </p>
       </section>
 
-      <section className="tile">
-        <h3>NOLS New Zealand</h3>
-        <p>
-          A program promoting wilderness and leadership skills.  Was elected
-          by my peers to lead an expidention in the Southern Alps of NZ.
-        </p>
-        <p>
-          April 2010 - June 2010
-        </p>
-      </section>
-
     </section>
   );
 };

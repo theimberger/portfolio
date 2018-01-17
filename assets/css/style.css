@@ -25,10 +25,10 @@
   /* position: fixed; */
   margin-top: 50px;
   border: none;
-  color: lightgrey;
+  color: darkorange;
   width: 100%;
   outline: none;
-  font-size: 1.5em;
+  font-size: 2em;
   letter-spacing: 2px;
   transition: color 1s;
   text-transform: lowercase;
@@ -50,6 +50,7 @@
 .search_line.expanded {
   width: 200%;
   margin-left: -150px;
+  border-top: 2px solid darkorange;
 }
 
 #search:focus {
@@ -91,7 +92,7 @@
   font-size: .6em;
 }
 
-.bold {
+.bold, .faux {
   font-weight: 600;
 }
 
@@ -117,13 +118,18 @@
 
 .tile {
   border-top: 1px solid grey;
-  width: 40%;
+  width: 100%;
+  max-width: 600px;
   display: flex;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+.tile:first-child {
+  border: none;
 }
 
 ul {
@@ -149,8 +155,9 @@ a img {
   opacity: 0.4;
 }
 
-a:hover {
+a:hover, .faux:hover {
   color: darkorange;
+  cursor: pointer;
 }
 
 a:hover img {
@@ -168,6 +175,7 @@ a:hover img {
   border: none;
   width: 25%;
 }
+
 .skill i {
   font-size: 3em;
 }

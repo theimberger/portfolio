@@ -2,6 +2,7 @@ import React from 'react';
 import Education from './education';
 import Employment from './employment';
 import Skills from './skills';
+import Additional from './additional';
 import pure from 'recompose/pure';
 
 const Projects = () => {
@@ -16,6 +17,9 @@ const Projects = () => {
       <hr />
       <h2>/employment</h2>
       <Employment />
+      <hr />
+      <h2>/additional</h2>
+      <Additional />
     </React.Fragment>
   );
 };

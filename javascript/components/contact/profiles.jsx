@@ -1,11 +1,9 @@
 import React from 'react';
 import pure from 'recompose/pure';
 
-const Profiles = (props) => {
+const Profiles = () => {
   return (
     <React.Fragment>
-      <h2>profiles</h2>
-      <hr />
       <ul>
         <li>
           <a href="https://www.linkedin.com/in/thomas-heimberger-46b255141/"
