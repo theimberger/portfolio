@@ -1,28 +1,27 @@
 import About from './other/about.jsx';
-// import Index from './other/index.jsx';
+import Index from './other/index.jsx';
 
 import Experience from './experience/experience.jsx';
 import Education from './experience/education.jsx';
 import Employment from './experience/employment.jsx';
 import Skills from './experience/skills.jsx';
+import Additional from './experience/additional.jsx';
 
 import Project from './work/project.jsx';
 import Projects from './work/projects.jsx';
 
 import Contact from './contact/contact.jsx';
 import Profiles from './contact/profiles.jsx';
+import Email from './contact/email.jsx';
 
 
 const SearchMap = [
+
+  // experience
   {
-    terms: ["about me", "bio"],
+    terms: ["experience", "resume", "background"],
     parent: false,
-    component: About
-  },
-  {
-    terms: ["contact"],
-    parent: false,
-    component: Contact
+    component: Experience
   },
   {
     terms: ["education"],
@@ -35,29 +34,26 @@ const SearchMap = [
     component: Employment
   },
   {
-    terms: ["experience", "resume", "background"],
-    parent: false,
-    component: Experience
+    terms: ["additional experience"],
+    parent: "experience",
+    component: Additional
   },
   {
-    terms: ["index", "all"],
+    terms: ["skills", "languages"],
+    parent: "experience",
+    component: Skills
+  },
+
+  // projects
+  {
+    terms: ["projects", "work", "recent work", "portfolio"],
     parent: false,
-    component: "./other/index.jsx"
+    component: Projects
   },
   {
     terms: ["nhof", "name hall of fame"],
     parent: "projects",
     component: Project
-  },
-  {
-    terms: ["profiles", "social media", "links"],
-    parent: "contact",
-    component: Profiles
-  },
-  {
-    terms: ["projects", "work", "recent work", "portfolio"],
-    parent: false,
-    component: Projects
   },
   {
     terms: ["relax"],
@@ -69,16 +65,42 @@ const SearchMap = [
     parent: "projects",
     component: Project
   },
-  {
-    terms: ["skills", "languages"],
-    parent: "experience",
-    component: Skills
-  },
+
   {
     terms: ["wikipedia crawler"],
     parent: "projects",
     component: Project
+  },
+
+  //contact
+  {
+    terms: ["contact", "get in touch"],
+    parent: false,
+    component: Contact
+  },
+  {
+    terms: ["profiles", "social media", "links"],
+    parent: "contact",
+    component: Profiles
+  },
+  {
+    terms: ["email & phone", "phone"],
+    parent: "contact",
+    component: Email
+  },
+
+  //other
+  {
+    terms: ["about me", "bio"],
+    parent: false,
+    component: About
+  },
+  {
+    terms: ["index", "all"],
+    parent: false,
+    component: Index
   }
+
 ];
 
 export default SearchMap;

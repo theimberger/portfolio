@@ -16,6 +16,11 @@ const SearchContainer = (props) => {
       <h1>Hey.</h1>
       <h2>I'm Thomas (but I mostly go by t).</h2>
       <h2>Just type what you're looking for below.</h2>
+      <h4>
+        - or just click
+        <span className="faux"> here </span>
+        to see everything at once -
+      </h4>
 
       <form
         onSubmit={submitHandler}>

@@ -1,24 +1,15 @@
 import React from 'react';
 import pure from 'recompose/pure';
 import Profiles from './profiles.jsx';
+import Email from './email.jsx';
 
-const Contact = (props) => {
+const Contact = () => {
   return (
     <React.Fragment>
-      <h2>contact</h2>
+      <h2>/email & phone</h2>
+      <Email />
       <hr />
-      <ul>
-        <li>
-          email
-          <br />
-          <a href="mailto:theimberger@gmail.com">theimberger@gmail.com</a>
-        </li>
-        <li>
-          phone (mobile)
-          <br />
-          <a href="tel:1-443-370-7866">(443) 370 7866</a>
-        </li>
-      </ul>
+      <h2>/profiles</h2>
       <Profiles />
     </ React.Fragment>
   );
