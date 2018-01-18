@@ -89,3 +89,7 @@ a:hover img {
 .skill i {
   font-size: 3em;
 }
+
+h1 {
+  z-index: 20;
+}

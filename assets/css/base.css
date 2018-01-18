@@ -31,12 +31,26 @@ p {
 }
 
 #view_port {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  left: 0;
+  bottom: 0;
+  overflow: visible;
+  overflow-x: hidden;
+
+}
+
+#scroll_bar_fix {
   position: fixed;
-  top: 60px;
+  top: 0px;
   right: 150px;
   left: 150px;
   bottom: 0;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 .wrapper {

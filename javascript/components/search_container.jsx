@@ -17,12 +17,12 @@ const SearchContainer = (props) => {
     props.itemSelectHandler(props.results[0]);
   };
 
-  let path = "";
-
+  let path = "",
+      parent = "";
   if (props.activeItem) {
     path = "/";
     if (props.activeItem.parent) {
-      path += props.activeItem.parent + "/";
+      parent = props.activeItem.parent + "/";
     }
   }
 
@@ -45,7 +45,8 @@ const SearchContainer = (props) => {
       <form
         onSubmit={submitHandler}
         id="input_wrapper">
-        <span>{path}</span>
+        {path}
+        <span id="path">{parent}</span>
         <input
           id="search"
           autoComplete="off"

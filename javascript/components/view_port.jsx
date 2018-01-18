@@ -4,11 +4,16 @@ import pure from 'recompose/pure';
 const ViewPort = (props) => {
   if (!props.currentPage) {
     return null;
-  } else
+  }
+
+  const scrollHandler = () => {
+  };
   return (
-    <section id="view_port">
-      {props.currentPage}
-    </section>
+    <div id="scroll_bar_fix">
+      <div id="view_port" onScroll={scrollHandler}>
+        {props.currentPage}
+      </div>
+    </div>
   );
 };
 
