@@ -8,17 +8,17 @@ import pure from 'recompose/pure';
 const Projects = () => {
   return (
     <React.Fragment>
-      <h2>/skills</h2>
+      <h1 className="subtitle">/skills</h1>
       <Skills />
       <br />
       <hr />
-      <h2>/education</h2>
+      <h1 className="subtitle">/education</h1>
       <Education />
       <hr />
-      <h2>/employment</h2>
+      <h1 className="subtitle">/employment</h1>
       <Employment />
       <hr />
-      <h2>/additional</h2>
+      <h1 className="subtitle">/additional</h1>
       <Additional />
     </React.Fragment>
   );

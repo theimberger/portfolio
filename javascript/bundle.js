@@ -1140,30 +1140,30 @@ var Projects = function Projects() {
     _react2.default.Fragment,
     null,
     _react2.default.createElement(
-      'h2',
-      null,
+      'h1',
+      { className: 'subtitle' },
       '/skills'
     ),
     _react2.default.createElement(_skills2.default, null),
     _react2.default.createElement('br', null),
     _react2.default.createElement('hr', null),
     _react2.default.createElement(
-      'h2',
-      null,
+      'h1',
+      { className: 'subtitle' },
       '/education'
     ),
     _react2.default.createElement(_education2.default, null),
     _react2.default.createElement('hr', null),
     _react2.default.createElement(
-      'h2',
-      null,
+      'h1',
+      { className: 'subtitle' },
       '/employment'
     ),
     _react2.default.createElement(_employment2.default, null),
     _react2.default.createElement('hr', null),
     _react2.default.createElement(
-      'h2',
-      null,
+      'h1',
+      { className: 'subtitle' },
       '/additional'
     ),
     _react2.default.createElement(_additional2.default, null)
@@ -19296,12 +19296,12 @@ var SearchContainer = function SearchContainer(props) {
     props.itemSelectHandler(props.results[0]);
   };
 
-  var path = "";
-
+  var path = "",
+      parent = "";
   if (props.activeItem) {
     path = "/";
     if (props.activeItem.parent) {
-      path += props.activeItem.parent + "/";
+      parent = props.activeItem.parent + "/";
     }
   }
 
@@ -19344,10 +19344,11 @@ var SearchContainer = function SearchContainer(props) {
       {
         onSubmit: submitHandler,
         id: 'input_wrapper' },
+      path,
       _react2.default.createElement(
         'span',
-        null,
-        path
+        { id: 'path' },
+        parent
       ),
       _react2.default.createElement('input', {
         id: 'search',
@@ -19869,10 +19870,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ViewPort = function ViewPort(props) {
   if (!props.currentPage) {
     return null;
-  } else return _react2.default.createElement(
-    'section',
-    { id: 'view_port' },
-    props.currentPage
+  }
+
+  var scrollHandler = function scrollHandler() {};
+  return _react2.default.createElement(
+    'div',
+    { id: 'scroll_bar_fix' },
+    _react2.default.createElement(
+      'div',
+      { id: 'view_port', onScroll: scrollHandler },
+      props.currentPage
+    )
   );
 };
 
