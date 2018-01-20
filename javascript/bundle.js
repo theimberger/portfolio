@@ -19296,12 +19296,12 @@ var SearchContainer = function SearchContainer(props) {
     props.itemSelectHandler(props.results[0]);
   };
 
-  var path = "",
-      parent = "";
+  var path = "";
+
   if (props.activeItem) {
     path = "/";
     if (props.activeItem.parent) {
-      parent = props.activeItem.parent + "/";
+      path += props.activeItem.parent + "/";
     }
   }
 
@@ -19344,11 +19344,10 @@ var SearchContainer = function SearchContainer(props) {
       {
         onSubmit: submitHandler,
         id: 'input_wrapper' },
-      path,
       _react2.default.createElement(
         'span',
         { id: 'path' },
-        parent
+        path
       ),
       _react2.default.createElement('input', {
         id: 'search',
@@ -19872,7 +19871,21 @@ var ViewPort = function ViewPort(props) {
     return null;
   }
 
-  var scrollHandler = function scrollHandler() {};
+  var scrollHandler = function scrollHandler() {
+    var headers = document.getElementsByTagName("h1"),
+        $path = $("#inner_path"),
+        i = 0;
+
+    var pt = parseInt($path.css("top"));
+    $path.css("top", pt - 1);
+    // $("#path").css("padding-top" + 1);
+    // while (i < headers.length) {
+    //   console.log(headers[i].offsetTop);
+    //   console.log(document.getElementById("view_port").scrollTop);
+    //   i ++;
+    // }
+  };
+
   return _react2.default.createElement(
     'div',
     { id: 'scroll_bar_fix' },

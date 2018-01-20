@@ -8,7 +8,7 @@ const fauxEvent = {
   target: {
     value: ""
   }
-}
+};
 
 const SearchContainer = (props) => {
 
@@ -17,12 +17,12 @@ const SearchContainer = (props) => {
     props.itemSelectHandler(props.results[0]);
   };
 
-  let path = "",
-      parent = "";
+  let path = "";
+
   if (props.activeItem) {
     path = "/";
     if (props.activeItem.parent) {
-      parent = props.activeItem.parent + "/";
+      path += props.activeItem.parent + "/";
     }
   }
 
@@ -45,8 +45,10 @@ const SearchContainer = (props) => {
       <form
         onSubmit={submitHandler}
         id="input_wrapper">
-        {path}
-        <span id="path">{parent}</span>
+        <span id="path">
+          {path}
+        </span>
+
         <input
           id="search"
           autoComplete="off"
