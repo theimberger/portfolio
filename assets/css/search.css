@@ -76,9 +76,9 @@
   font-weight: 300;
 }
 
-#width_getter {
+#headers {
   position: fixed;
-  z-index: -5;
-  top: -1000px;
+  top: 35px;
+  left: 165px;
   font-size: 2em;
 }
