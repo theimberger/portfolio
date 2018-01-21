@@ -19362,6 +19362,11 @@ var SearchContainer = function SearchContainer(props) {
       _react2.default.createElement('span', null)
     ),
     _react2.default.createElement('hr', { className: 'search_line' }),
+    _react2.default.createElement(
+      'div',
+      { id: 'headers' },
+      'experience'
+    ),
     _react2.default.createElement(_search_results2.default, {
       itemSelectHandler: props.itemSelectHandler,
       results: props.results,
