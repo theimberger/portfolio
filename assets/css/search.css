@@ -5,6 +5,7 @@
   width: 50%;
   transition: top 1s;
   z-index: 5;
+  background: white;
 }
 
 #search {
@@ -78,7 +79,9 @@
 
 #headers {
   position: fixed;
-  top: 35px;
-  left: 165px;
+  top: 4px;
+  height: 55px;
+  overflow: hidden;
+  left: 167px;
   font-size: 2em;
 }

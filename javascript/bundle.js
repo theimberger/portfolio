@@ -19365,7 +19365,11 @@ var SearchContainer = function SearchContainer(props) {
     _react2.default.createElement(
       'div',
       { id: 'headers' },
-      'experience'
+      'index ',
+      _react2.default.createElement('br', null),
+      'experience ',
+      _react2.default.createElement('br', null),
+      'skills'
     ),
     _react2.default.createElement(_search_results2.default, {
       itemSelectHandler: props.itemSelectHandler,
@@ -19878,11 +19882,16 @@ var ViewPort = function ViewPort(props) {
 
   var scrollHandler = function scrollHandler() {
     var headers = document.getElementsByTagName("h1"),
-        $path = $("#inner_path"),
+        $path = $("#headers"),
         i = 0;
 
     var pt = parseInt($path.css("top"));
+    var ht = $path.height();
+
     $path.css("top", pt - 1);
+    $path.height(ht + 1);
+    console.log($path.height());
+
     // $("#path").css("padding-top" + 1);
     // while (i < headers.length) {
     //   console.log(headers[i].offsetTop);
