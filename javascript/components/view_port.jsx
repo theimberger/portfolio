@@ -8,11 +8,16 @@ const ViewPort = (props) => {
 
   const scrollHandler = () => {
     let headers = document.getElementsByTagName("h1"),
-        $path = $("#inner_path"),
+        $path = $("#headers"),
         i = 0;
 
     let pt = parseInt($path.css("top"));
+    let ht = $path.height();
+    
     $path.css("top", pt - 1);
+    $path.height((ht + 1));
+    console.log($path.height());
+
     // $("#path").css("padding-top" + 1);
     // while (i < headers.length) {
     //   console.log(headers[i].offsetTop);
