@@ -31,9 +31,10 @@
 }
 
 .search_line.expanded {
-  border: 2px solid transparent;
+  /* border-top: 2px transparent; */
   width: 200%;
   margin-left: -150px;
+  display: none;
 }
 
 #search:focus {
@@ -80,8 +81,8 @@
 #headers {
   position: fixed;
   top: 4px;
-  height: 55px;
+  height: 50px;
   overflow: hidden;
-  left: 167px;
+  left: 164.5px;
   font-size: 2em;
 }

@@ -60,7 +60,7 @@ const SearchContainer = (props) => {
         <span></span>
       </form>
       <hr className="search_line" />
-      <div id="headers">
+      <div id="headers" className="hidden">
         index <br />
         experience <br />
         skills
