@@ -8,6 +8,7 @@ export const enterSearchMode = () => {
   $searchLine.addClass("expanded");
   setTimeout(() => {
     $("#signature").removeClass("hidden");
+    $("#headers").removeClass("hidden");
   }, 1000);
 };
 

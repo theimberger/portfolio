@@ -57,7 +57,7 @@ class Root extends React.Component {
 
   itemSelectHandler(item) {
     let newState = this.state;
-    $("#search").blur();
+    $("#search").css("display", "none");
     newState.pageRendered = <item.component />;
     newState.searchValue = item.terms[0];
     newState.activeItem = item;

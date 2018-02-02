@@ -1037,6 +1037,7 @@ var enterSearchMode = exports.enterSearchMode = function enterSearchMode() {
   $searchLine.addClass("expanded");
   setTimeout(function () {
     $("#signature").removeClass("hidden");
+    $("#headers").removeClass("hidden");
   }, 1000);
 };
 
@@ -19198,7 +19199,7 @@ var Root = function (_React$Component) {
     key: 'itemSelectHandler',
     value: function itemSelectHandler(item) {
       var newState = this.state;
-      $("#search").blur();
+      $("#search").css("display", "none");
       newState.pageRendered = _react2.default.createElement(item.component, null);
       newState.searchValue = item.terms[0];
       newState.activeItem = item;
@@ -19364,7 +19365,7 @@ var SearchContainer = function SearchContainer(props) {
     _react2.default.createElement('hr', { className: 'search_line' }),
     _react2.default.createElement(
       'div',
-      { id: 'headers' },
+      { id: 'headers', className: 'hidden' },
       'index ',
       _react2.default.createElement('br', null),
       'experience ',
