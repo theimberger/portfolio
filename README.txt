@@ -1,4 +1,4 @@
-# (Go to site)[https://theimberger.github.io/portfolio/]
+# [Go to site](https://theimberger.github.io/portfolio/)
 
 ### version two in progress...
 
