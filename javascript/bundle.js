@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 29);
+/******/ 	return __webpack_require__(__webpack_require__.s = 28);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,9 +71,9 @@
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(30);
+  module.exports = __webpack_require__(29);
 } else {
-  module.exports = __webpack_require__(31);
+  module.exports = __webpack_require__(30);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
@@ -87,11 +87,11 @@ if (process.env.NODE_ENV === 'production') {
 
 exports.__esModule = true;
 
-var _shouldUpdate = __webpack_require__(45);
+var _shouldUpdate = __webpack_require__(44);
 
 var _shouldUpdate2 = _interopRequireDefault(_shouldUpdate);
 
-var _shallowEqual = __webpack_require__(48);
+var _shallowEqual = __webpack_require__(47);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
@@ -690,7 +690,7 @@ module.exports = shallowEqual;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(6);
   var warning = __webpack_require__(7);
-  var ReactPropTypesSecret = __webpack_require__(32);
+  var ReactPropTypesSecret = __webpack_require__(31);
   var loggedTypeFailures = {};
 }
 
@@ -918,7 +918,7 @@ module.exports = getActiveElement;
  * 
  */
 
-var isTextNode = __webpack_require__(35);
+var isTextNode = __webpack_require__(34);
 
 /*eslint-disable no-bitwise */
 
@@ -984,7 +984,7 @@ module.exports = focusNode;
 
 exports.__esModule = true;
 
-var _setStatic = __webpack_require__(46);
+var _setStatic = __webpack_require__(45);
 
 var _setStatic2 = _interopRequireDefault(_setStatic);
 
@@ -1005,7 +1005,7 @@ exports.default = setDisplayName;
 
 exports.__esModule = true;
 
-var _getDisplayName = __webpack_require__(47);
+var _getDisplayName = __webpack_require__(46);
 
 var _getDisplayName2 = _interopRequireDefault(_getDisplayName);
 
@@ -1522,9 +1522,21 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _project = __webpack_require__(25);
+var _wiki = __webpack_require__(52);
 
-var _project2 = _interopRequireDefault(_project);
+var _wiki2 = _interopRequireDefault(_wiki);
+
+var _shift = __webpack_require__(53);
+
+var _shift2 = _interopRequireDefault(_shift);
+
+var _relax = __webpack_require__(54);
+
+var _relax2 = _interopRequireDefault(_relax);
+
+var _nhof = __webpack_require__(55);
+
+var _nhof2 = _interopRequireDefault(_nhof);
 
 var _pure = __webpack_require__(1);
 
@@ -1541,21 +1553,27 @@ var Projects = function Projects(props) {
       null,
       '/wikipedia crawler'
     ),
-    _react2.default.createElement(_project2.default, null),
+    _react2.default.createElement(_wiki2.default, null),
     _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'h2',
       null,
       '/relax'
     ),
-    _react2.default.createElement(_project2.default, null),
+    _react2.default.createElement(_relax2.default, null),
     _react2.default.createElement('hr', null),
     _react2.default.createElement(
       'h2',
       null,
       '/the name hall of fame'
     ),
-    _react2.default.createElement(_project2.default, null)
+    _react2.default.createElement(_nhof2.default, null),
+    _react2.default.createElement(
+      'h2',
+      null,
+      '/shiftFour'
+    ),
+    _react2.default.createElement(_shift2.default, null)
   );
 };
 
@@ -1580,42 +1598,11 @@ var _pure = __webpack_require__(1);
 
 var _pure2 = _interopRequireDefault(_pure);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Project = function Project(props) {
-  return _react2.default.createElement(
-    'div',
-    null,
-    'this is a project page'
-  );
-};
-
-exports.default = (0, _pure2.default)(Project);
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _pure = __webpack_require__(1);
-
-var _pure2 = _interopRequireDefault(_pure);
-
-var _profiles = __webpack_require__(27);
+var _profiles = __webpack_require__(26);
 
 var _profiles2 = _interopRequireDefault(_profiles);
 
-var _email = __webpack_require__(28);
+var _email = __webpack_require__(27);
 
 var _email2 = _interopRequireDefault(_email);
 
@@ -1644,7 +1631,7 @@ var Contact = function Contact() {
 exports.default = (0, _pure2.default)(Contact);
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1711,7 +1698,7 @@ var Profiles = function Profiles() {
 exports.default = (0, _pure2.default)(Profiles);
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1763,7 +1750,7 @@ var Email = function Email() {
 exports.default = (0, _pure2.default)(Email);
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1773,11 +1760,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(33);
+var _reactDom = __webpack_require__(32);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _root = __webpack_require__(42);
+var _root = __webpack_require__(41);
 
 var _root2 = _interopRequireDefault(_root);
 
@@ -1789,7 +1776,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1817,7 +1804,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3182,7 +3169,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3201,7 +3188,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3239,15 +3226,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(34);
+  module.exports = __webpack_require__(33);
 } else {
-  module.exports = __webpack_require__(37);
+  module.exports = __webpack_require__(36);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3483,7 +3470,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3498,7 +3485,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
  * @typechecks
  */
 
-var isNode = __webpack_require__(36);
+var isNode = __webpack_require__(35);
 
 /**
  * @param {*} object The object to check.
@@ -3511,7 +3498,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3539,7 +3526,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3573,8 +3560,8 @@ var containsNode = __webpack_require__(13);
 var focusNode = __webpack_require__(14);
 var emptyObject = __webpack_require__(5);
 var checkPropTypes = __webpack_require__(9);
-var hyphenateStyleName = __webpack_require__(38);
-var camelizeStyleName = __webpack_require__(40);
+var hyphenateStyleName = __webpack_require__(37);
+var camelizeStyleName = __webpack_require__(39);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -18941,7 +18928,7 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18956,7 +18943,7 @@ module.exports = reactDom;
 
 
 
-var hyphenate = __webpack_require__(39);
+var hyphenate = __webpack_require__(38);
 
 var msPattern = /^ms-/;
 
@@ -18983,7 +18970,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19019,7 +19006,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19034,7 +19021,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(41);
+var camelize = __webpack_require__(40);
 
 var msPattern = /^-ms-/;
 
@@ -19062,7 +19049,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19097,7 +19084,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19113,19 +19100,19 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _signature = __webpack_require__(43);
+var _signature = __webpack_require__(42);
 
 var _signature2 = _interopRequireDefault(_signature);
 
-var _search_container = __webpack_require__(44);
+var _search_container = __webpack_require__(43);
 
 var _search_container2 = _interopRequireDefault(_search_container);
 
-var _search_map = __webpack_require__(51);
+var _search_map = __webpack_require__(50);
 
 var _search_map2 = _interopRequireDefault(_search_map);
 
-var _view_port = __webpack_require__(53);
+var _view_port = __webpack_require__(57);
 
 var _view_port2 = _interopRequireDefault(_view_port);
 
@@ -19231,7 +19218,7 @@ var Root = function (_React$Component) {
 exports.default = Root;
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19258,7 +19245,7 @@ var Signature = function Signature() {
 exports.default = Signature;
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19276,7 +19263,7 @@ var _pure = __webpack_require__(1);
 
 var _pure2 = _interopRequireDefault(_pure);
 
-var _search_results = __webpack_require__(49);
+var _search_results = __webpack_require__(48);
 
 var _search_results2 = _interopRequireDefault(_search_results);
 
@@ -19370,7 +19357,19 @@ var SearchContainer = function SearchContainer(props) {
       _react2.default.createElement('br', null),
       'experience ',
       _react2.default.createElement('br', null),
-      'skills'
+      'skills ',
+      _react2.default.createElement('br', null),
+      'education ',
+      _react2.default.createElement('br', null),
+      'employment ',
+      _react2.default.createElement('br', null),
+      'additional ',
+      _react2.default.createElement('br', null),
+      'projects ',
+      _react2.default.createElement('br', null),
+      'projects ',
+      _react2.default.createElement('br', null),
+      'education'
     ),
     _react2.default.createElement(_search_results2.default, {
       itemSelectHandler: props.itemSelectHandler,
@@ -19383,7 +19382,7 @@ var SearchContainer = function SearchContainer(props) {
 exports.default = (0, _pure2.default)(SearchContainer);
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19444,7 +19443,7 @@ exports.default = shouldUpdate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19463,7 +19462,7 @@ var setStatic = function setStatic(key, value) {
 exports.default = setStatic;
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19485,7 +19484,7 @@ var getDisplayName = function getDisplayName(Component) {
 exports.default = getDisplayName;
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19502,7 +19501,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _shallowEqual2.default;
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19520,7 +19519,7 @@ var _pure = __webpack_require__(1);
 
 var _pure2 = _interopRequireDefault(_pure);
 
-var _search_results_item = __webpack_require__(50);
+var _search_results_item = __webpack_require__(49);
 
 var _search_results_item2 = _interopRequireDefault(_search_results_item);
 
@@ -19552,7 +19551,7 @@ var SearchResults = function SearchResults(props) {
 exports.default = (0, _pure2.default)(SearchResults);
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19646,7 +19645,7 @@ var SearchResultsItem = function SearchResultsItem(props) {
 exports.default = (0, _pure2.default)(SearchResultsItem);
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19660,7 +19659,7 @@ var _about = __webpack_require__(18);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _index = __webpack_require__(52);
+var _index = __webpack_require__(51);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -19684,7 +19683,7 @@ var _additional = __webpack_require__(23);
 
 var _additional2 = _interopRequireDefault(_additional);
 
-var _project = __webpack_require__(25);
+var _project = __webpack_require__(56);
 
 var _project2 = _interopRequireDefault(_project);
 
@@ -19692,15 +19691,15 @@ var _projects = __webpack_require__(24);
 
 var _projects2 = _interopRequireDefault(_projects);
 
-var _contact = __webpack_require__(26);
+var _contact = __webpack_require__(25);
 
 var _contact2 = _interopRequireDefault(_contact);
 
-var _profiles = __webpack_require__(27);
+var _profiles = __webpack_require__(26);
 
 var _profiles2 = _interopRequireDefault(_profiles);
 
-var _email = __webpack_require__(28);
+var _email = __webpack_require__(27);
 
 var _email2 = _interopRequireDefault(_email);
 
@@ -19783,7 +19782,7 @@ var SearchMap = [
 exports.default = SearchMap;
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19809,7 +19808,7 @@ var _projects = __webpack_require__(24);
 
 var _projects2 = _interopRequireDefault(_projects);
 
-var _contact = __webpack_require__(26);
+var _contact = __webpack_require__(25);
 
 var _contact2 = _interopRequireDefault(_contact);
 
@@ -19856,7 +19855,178 @@ var Index = function Index() {
 exports.default = (0, _pure2.default)(Index);
 
 /***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var WikiCrawler = function WikiCrawler(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'p',
+      null,
+      'A data visualization tool which traverses links in wikipedia to find connections between a start and end point.'
+    )
+  );
+};
+
+exports.default = (0, _pure2.default)(WikiCrawler);
+
+/***/ }),
 /* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ShiftFour = function ShiftFour(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'p',
+      null,
+      'A lightweight JavaScript library inspired by jQuery. It allows users to create DomNodeCollection instances using the primary function, s4. These instances provide the user a number of helpful methods, such as #css(property, value), #append, #remove, and #on and #off event listener functions.'
+    )
+  );
+};
+
+exports.default = (0, _pure2.default)(ShiftFour);
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Relax = function Relax(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'p',
+      null,
+      'Relax is a clone of the workplace chat app, Slack.  It utilizes a PostgreSQL DB, Ruby on Rails, and a React/Redux front end.  It reproduces Slack\'s realtime chat using Rails\' web socketing utility, Action Cable to create live connections between the server and the client.  Connections are distinguished via routes that match the Channel and Space ids.'
+    )
+  );
+};
+
+exports.default = (0, _pure2.default)(Relax);
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var NHOF = function NHOF(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'p',
+      null,
+      'The Name Hall of Fame is a pet project I\'ve been working on with my brother (a graphic designer), Max Heimberger. The idea is born of inside joke between us and our friend Collin and the purpose is to document the greatest names ever bequeathed.  Names are submitted by the public but only are added to the list if they have a corresponding wikipedia page.'
+    )
+  );
+};
+
+exports.default = (0, _pure2.default)(NHOF);
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _pure = __webpack_require__(1);
+
+var _pure2 = _interopRequireDefault(_pure);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Project = function Project(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    'this is a project page'
+  );
+};
+
+exports.default = (0, _pure2.default)(Project);
+
+/***/ }),
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19881,24 +20051,48 @@ var ViewPort = function ViewPort(props) {
     return null;
   }
 
+  var headerPositions = [];
+  var triggerNumber = 0,
+      headerOffset = 4;
+
   var scrollHandler = function scrollHandler() {
-    var headers = document.getElementsByTagName("h1"),
-        $path = $("#headers"),
-        i = 0;
 
-    var pt = parseInt($path.css("top"));
-    var ht = $path.height();
+    var $headers = document.getElementsByTagName("h1"),
+        scrollDistance = document.getElementById("view_port").scrollTop;
 
-    $path.css("top", pt - 1);
-    $path.height(ht + 1);
-    console.log($path.height());
+    var i = 1;
+    while (headerPositions.length + 1 < $headers.length) {
+      headerPositions.push($headers[i].offsetTop);
+      i++;
+    }
 
-    // $("#path").css("padding-top" + 1);
-    // while (i < headers.length) {
-    //   console.log(headers[i].offsetTop);
-    //   console.log(document.getElementById("view_port").scrollTop);
-    //   i ++;
-    // }
+    var tPos = headerPositions[triggerNumber];
+
+    if (scrollDistance >= tPos - 47 && scrollDistance <= tPos - 2) {
+      var $headersWrapper = $("#headers"),
+          pt = parseInt($headersWrapper.css("top")),
+          ht = $headersWrapper.height();
+
+      // headerOffset --;
+      // let's do some math
+      // our range is 47 each time so while in the range of a particular header
+      // the offset should be equal to that header's offset index minus the
+      // scrollDistance plus 47 times the number of previous ranges
+      headerOffset = 47 * triggerNumber + (scrollDistance - (tPos - 47));
+      $headersWrapper.css("top", -headerOffset);
+      $headersWrapper.height(47 + (triggerNumber + 1) * 47);
+    } else if (scrollDistance > tPos - 2) {
+      triggerNumber++;
+    } else if (scrollDistance < tPos - 47) {
+      var _$headersWrapper = $("#headers");
+      if (triggerNumber === 0) {
+        _$headersWrapper.css("top", 4);
+        _$headersWrapper.height(50);
+      } else {
+        triggerNumber--;
+        _$headersWrapper.height(47 + (triggerNumber + 1) * 47);
+      }
+    }
   };
 
   return _react2.default.createElement(
