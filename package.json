@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "https://theimberger.github.io/portfolio/",
+  "main": "./javascript/index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack javascript/index.js javascript/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theimberger/portfolio.git"
+  },
+  "author": "t",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theimberger/portfolio/issues"
+  },
+  "homepage": "https://github.com/theimberger/portfolio#readme"
+}
