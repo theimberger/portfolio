@@ -69,11 +69,16 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_layout_correction__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_wave__ = __webpack_require__(1);
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  __WEBPACK_IMPORTED_MODULE_0__modules_layout_correction__["a" /* fixMargins */]();
+  const sea = document.querySelector('#sea');
+  let i = 0;
+  while (i < 10) {
+    new __WEBPACK_IMPORTED_MODULE_0__modules_wave__["a" /* default */](sea);
+    i += 1;
+  }
 });
 
 
@@ -82,15 +87,28 @@ document.addEventListener('DOMContentLoaded', () => {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-const fixMargins = () => {
-  const sea = document.querySelector('#sea');
-  const windowHeight = document.body.offsetHeight;
-  sea.style.marginTop = `${
-    (windowHeight * .09 * (10/7))
-  }px`;
-};
-/* harmony export (immutable) */ __webpack_exports__["a"] = fixMargins;
+class Wave {
+  constructor (sea, layer = 1) {
+    const initialXPosition = Math.floor(Math.random() * 100);
+    const initialYPosition = Math.floor(Math.random() * 75);
 
+    const waveElement = document.createElement('div');
+
+    waveElement.classList.add('wave');
+    waveElement.style.top = `${initialYPosition}vh`;
+    waveElement.style.left = `${initialXPosition}vw`;
+    waveElement.style.borderBottom = '3vw solid #607495';
+    waveElement.style.borderLeft = '25vw solid transparent';
+    waveElement.style.borderRight = '25vw solid transparent';
+
+    sea.appendChild(waveElement);
+  }
+  move() {
+
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Wave);
 
 
 /***/ })

@@ -17,10 +17,6 @@ h1, h2, p {
   font-weight: normal;
 }
 
-#wapper {
-  position: relative;
-}
-
 #sky {
   position: absolute;
   top: 0;
@@ -29,16 +25,15 @@ h1, h2, p {
   height: 25%;
   background: #BCD0DD;
   z-index: 5;
-  /* transform: rotateX(-45deg); */
 }
 
 #sea {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 100%;
+  height: 75%;
   background: #768AA8;
   color: white;
-  transform: rotateX(40deg);
 }
 
 #contact {
@@ -51,15 +46,6 @@ h1, h2, p {
 }
 
 .wave {
-  height: 0;
-  width: 0;
-  display: inline-block;
+  top: 0;
   position: absolute;
-  left: 100px;
-  border-top: 100px solid transparent;
-  border-bottom-right-radius: 100px;
-  border-bottom-left-radius: 100px;
-  border-bottom: 100px solid #607495;
-  border-left: 200px solid transparent;
-  border-right: 200px solid transparent;
 }

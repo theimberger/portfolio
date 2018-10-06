@@ -1,5 +1,10 @@
-import * as LayoutCorrection from './modules/layout-correction';
+import Wave from './modules/wave';
 
 document.addEventListener('DOMContentLoaded', () => {
-  LayoutCorrection.fixMargins();
+  const sea = document.querySelector('#sea');
+  let i = 0;
+  while (i < 10) {
+    new Wave(sea);
+    i += 1;
+  }
 });
