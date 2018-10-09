@@ -70,15 +70,13 @@
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_wave__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_sea__ = __webpack_require__(2);
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const sea = document.querySelector('#sea');
-  let i = 0;
-  while (i < 10) {
-    new __WEBPACK_IMPORTED_MODULE_0__modules_wave__["a" /* default */](sea);
-    i += 1;
-  }
+  const canvas = document.querySelector('#sea').getContext('2d');
+  const sea = new __WEBPACK_IMPORTED_MODULE_1__modules_sea__["a" /* default */](canvas)
 });
 
 
@@ -89,26 +87,46 @@ document.addEventListener('DOMContentLoaded', () => {
 "use strict";
 class Wave {
   constructor (sea, layer = 1) {
-    const initialXPosition = Math.floor(Math.random() * 100);
-    const initialYPosition = Math.floor(Math.random() * 75);
-
-    const waveElement = document.createElement('div');
-
-    waveElement.classList.add('wave');
-    waveElement.style.top = `${initialYPosition}vh`;
-    waveElement.style.left = `${initialXPosition}vw`;
-    waveElement.style.borderBottom = '3vw solid #607495';
-    waveElement.style.borderLeft = '25vw solid transparent';
-    waveElement.style.borderRight = '25vw solid transparent';
-
-    sea.appendChild(waveElement);
+    // const initialXPosition = Math.floor(Math.random() * 100);
+    // const initialYPosition = Math.floor(Math.random() * 75);
+    //
+    // const waveElement = document.createElement('div');
+    //
+    // waveElement.classList.add('wave');
+    // waveElement.style.top = `${initialYPosition}vh`;
+    // waveElement.style.left = `${initialXPosition - 50}vw`;
+    // waveElement.style.borderBottom = '3vw solid #607495';
+    // waveElement.style.borderLeft = '50vw solid transparent';
+    // waveElement.style.borderRight = '50vw solid transparent';
+    //
+    // sea.appendChild(waveElement);
   }
   move() {
 
   }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (Wave);
+/* unused harmony default export */ var _unused_webpack_default_export = (Wave);
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+class Sea {
+  constructor (canvas) {
+    this.width = Math.ceil(window.innerWidth);
+    this.height = Math.ceil(window.innerHeight);
+    canvas.fillStyle = '#768AA8';
+    canvas.fillRect(0, 0, this.width, window.innerHeight);
+  }
+  move() {
+
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Sea);
 
 
 /***/ })
