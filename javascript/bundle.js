@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -68,18 +68,47 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_wave__ = __webpack_require__(1);
+class Wave {
+  constructor ({
+    sea,
+    maxHeight,
+    maxWidth,
+    layer = 1,
+  }) {
+    const coordinates = {
+      top: [],
+      left: [],
+      right: [],
+    };
 
+    coordinates.top.push(Math.floor(Math.random() * maxWidth));
+    coordinates.top.push(Math.floor(Math.random() * maxHeight));
+    let waveWidth =  Math.floor((maxWidth - (Math.random() * 400)) / 3);
 
-document.addEventListener('DOMContentLoaded', () => {
-  const sea = document.querySelector('#sea');
-  let i = 0;
-  while (i < 10) {
-    new __WEBPACK_IMPORTED_MODULE_0__modules_wave__["a" /* default */](sea);
-    i += 1;
+    let waveHeight =  Math.floor(waveWidth / 5);
+
+    coordinates.right.push(coordinates.top[0] + waveWidth);
+    coordinates.right.push(coordinates.top[1] + waveHeight);
+
+    coordinates.left.push(coordinates.top[0] - waveWidth);
+    coordinates.left.push(coordinates.top[1] + waveHeight);
+
+    sea.beginPath();
+    sea.moveTo(...coordinates.top);
+    sea.lineTo(...coordinates.left);
+    sea.lineTo(...coordinates.right);
+    sea.closePath();
+    sea.fillStyle = '#607495';
+    sea.fill();
+    this.coordinates = coordinates;
   }
-});
+
+  move() {
+
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Wave);
 
 
 /***/ }),
@@ -87,28 +116,57 @@ document.addEventListener('DOMContentLoaded', () => {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-class Wave {
-  constructor (sea, layer = 1) {
-    const initialXPosition = Math.floor(Math.random() * 100);
-    const initialYPosition = Math.floor(Math.random() * 75);
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_wave__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_sea__ = __webpack_require__(2);
 
-    const waveElement = document.createElement('div');
 
-    waveElement.classList.add('wave');
-    waveElement.style.top = `${initialYPosition}vh`;
-    waveElement.style.left = `${initialXPosition}vw`;
-    waveElement.style.borderBottom = '3vw solid #607495';
-    waveElement.style.borderLeft = '25vw solid transparent';
-    waveElement.style.borderRight = '25vw solid transparent';
 
-    sea.appendChild(waveElement);
+document.addEventListener('DOMContentLoaded', () => {
+  const canvas = document.querySelector('#sea');
+  const sea = new __WEBPACK_IMPORTED_MODULE_1__modules_sea__["a" /* default */](canvas);
+});
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wave__ = __webpack_require__(0);
+
+
+class Sea {
+  constructor (canvas) {
+    const maxHeight = Math.ceil(window.innerHeight * 0.75);
+    const maxWidth = Math.ceil(window.innerWidth);
+    canvas.width = maxWidth;
+    canvas.height = maxHeight;
+    const seaContext = canvas.getContext('2d');
+
+    this.width = maxWidth;
+    this.height = maxHeight;
+    this.seaElement = canvas;
+    seaContext.fillStyle = '#768AA8';
+    seaContext.fillRect(0, 0, maxWidth, maxHeight);
+
+    this.waves = [];
+
+    let i = 0;
+    while (i < 10) {
+      this.waves.push(new __WEBPACK_IMPORTED_MODULE_0__wave__["a" /* default */]({
+        maxWidth,
+        maxHeight,
+        sea: seaContext,
+      }));
+      i += 1;
+    }
+
   }
-  move() {
 
-  }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (Wave);
+/* harmony default export */ __webpack_exports__["a"] = (Sea);
 
 
 /***/ })

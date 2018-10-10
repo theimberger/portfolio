@@ -8,6 +8,16 @@ body, HTML, #wrapper {
   overflow: hidden;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
 section {
   margin: 0;
 }
@@ -30,10 +40,9 @@ h1, h2, p {
 #sea {
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 75%;
-  background: #768AA8;
-  color: white;
 }
 
 #contact {
@@ -43,9 +52,4 @@ h1, h2, p {
   color: white;
   padding-right: 5%;
   text-align: right;
-}
-
-.wave {
-  top: 0;
-  position: absolute;
 }

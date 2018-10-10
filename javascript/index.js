@@ -1,10 +1,7 @@
 import Wave from './modules/wave';
+import Sea from './modules/sea';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const sea = document.querySelector('#sea');
-  let i = 0;
-  while (i < 10) {
-    new Wave(sea);
-    i += 1;
-  }
+  const canvas = document.querySelector('#sea');
+  const sea = new Sea(canvas);
 });

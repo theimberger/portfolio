@@ -1,19 +1,38 @@
 class Wave {
-  constructor (sea, layer = 1) {
-    const initialXPosition = Math.floor(Math.random() * 100);
-    const initialYPosition = Math.floor(Math.random() * 75);
+  constructor ({
+    sea,
+    maxHeight,
+    maxWidth,
+    layer = 1,
+  }) {
+    const coordinates = {
+      top: [],
+      left: [],
+      right: [],
+    };
 
-    const waveElement = document.createElement('div');
+    coordinates.top.push(Math.floor(Math.random() * maxWidth));
+    coordinates.top.push(Math.floor(Math.random() * maxHeight));
+    let waveWidth =  Math.floor((maxWidth - (Math.random() * 400)) / 3);
 
-    waveElement.classList.add('wave');
-    waveElement.style.top = `${initialYPosition}vh`;
-    waveElement.style.left = `${initialXPosition}vw`;
-    waveElement.style.borderBottom = '3vw solid #607495';
-    waveElement.style.borderLeft = '25vw solid transparent';
-    waveElement.style.borderRight = '25vw solid transparent';
+    let waveHeight =  Math.floor(waveWidth / 5);
 
-    sea.appendChild(waveElement);
+    coordinates.right.push(coordinates.top[0] + waveWidth);
+    coordinates.right.push(coordinates.top[1] + waveHeight);
+
+    coordinates.left.push(coordinates.top[0] - waveWidth);
+    coordinates.left.push(coordinates.top[1] + waveHeight);
+
+    sea.beginPath();
+    sea.moveTo(...coordinates.top);
+    sea.lineTo(...coordinates.left);
+    sea.lineTo(...coordinates.right);
+    sea.closePath();
+    sea.fillStyle = '#607495';
+    sea.fill();
+    this.coordinates = coordinates;
   }
+
   move() {
 
   }
