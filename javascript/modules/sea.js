@@ -1,13 +1,35 @@
+import Wave from './wave';
+
 class Sea {
   constructor (canvas) {
-    this.width = Math.ceil(window.innerWidth);
-    this.height = Math.ceil(window.innerHeight);
-    canvas.fillStyle = '#768AA8';
-    canvas.fillRect(0, 0, this.width, window.innerHeight);
-  }
-  move() {
+    const maxHeight = Math.ceil(window.innerHeight * 0.75);
+    const maxWidth = Math.ceil(window.innerWidth);
+    canvas.width = maxWidth;
+    canvas.height = maxHeight;
+    const seaContext = canvas.getContext('2d');
+
+    console.log(seaContext);
+
+    this.width = maxWidth;
+    this.height = maxHeight;
+    this.seaElement = canvas;
+    seaContext.fillStyle = '#768AA8';
+    seaContext.fillRect(0, 0, maxWidth, maxHeight);
+
+    this.waves = [];
+
+    let i = 0;
+    while (i < 10) {
+      this.waves.push(new Wave({
+        maxWidth,
+        maxHeight,
+        sea: seaContext,
+      }));
+      i += 1;
+    }
 
   }
+
 }
 
 export default Sea;

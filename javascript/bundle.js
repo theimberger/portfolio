@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -68,16 +68,47 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_wave__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_sea__ = __webpack_require__(2);
+class Wave {
+  constructor ({
+    sea,
+    maxHeight,
+    maxWidth,
+    layer = 1,
+  }) {
+    const coordinates = {
+      top: [],
+      left: [],
+      right: [],
+    };
 
+    coordinates.top.push(Math.floor(Math.random() * maxWidth));
+    coordinates.top.push(Math.floor(Math.random() * maxHeight));
+    let waveWidth =  Math.floor((maxWidth - (Math.random() * 400)) / 3);
 
+    let waveHeight =  Math.floor(waveWidth / 5);
 
-document.addEventListener('DOMContentLoaded', () => {
-  const canvas = document.querySelector('#sea').getContext('2d');
-  const sea = new __WEBPACK_IMPORTED_MODULE_1__modules_sea__["a" /* default */](canvas)
-});
+    coordinates.right.push(coordinates.top[0] + waveWidth);
+    coordinates.right.push(coordinates.top[1] + waveHeight);
+
+    coordinates.left.push(coordinates.top[0] - waveWidth);
+    coordinates.left.push(coordinates.top[1] + waveHeight);
+
+    sea.beginPath();
+    sea.moveTo(...coordinates.top);
+    sea.lineTo(...coordinates.left);
+    sea.lineTo(...coordinates.right);
+    sea.closePath();
+    sea.fillStyle = '#607495';
+    sea.fill();
+    this.coordinates = coordinates;
+    console.log(coordinates);
+  }
+  move() {
+
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Wave);
 
 
 /***/ }),
@@ -85,28 +116,16 @@ document.addEventListener('DOMContentLoaded', () => {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-class Wave {
-  constructor (sea, layer = 1) {
-    // const initialXPosition = Math.floor(Math.random() * 100);
-    // const initialYPosition = Math.floor(Math.random() * 75);
-    //
-    // const waveElement = document.createElement('div');
-    //
-    // waveElement.classList.add('wave');
-    // waveElement.style.top = `${initialYPosition}vh`;
-    // waveElement.style.left = `${initialXPosition - 50}vw`;
-    // waveElement.style.borderBottom = '3vw solid #607495';
-    // waveElement.style.borderLeft = '50vw solid transparent';
-    // waveElement.style.borderRight = '50vw solid transparent';
-    //
-    // sea.appendChild(waveElement);
-  }
-  move() {
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_wave__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_sea__ = __webpack_require__(2);
 
-  }
-}
 
-/* unused harmony default export */ var _unused_webpack_default_export = (Wave);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const canvas = document.querySelector('#sea');
+  const sea = new __WEBPACK_IMPORTED_MODULE_1__modules_sea__["a" /* default */](canvas);
+});
 
 
 /***/ }),
@@ -114,16 +133,39 @@ class Wave {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wave__ = __webpack_require__(0);
+
+
 class Sea {
   constructor (canvas) {
-    this.width = Math.ceil(window.innerWidth);
-    this.height = Math.ceil(window.innerHeight);
-    canvas.fillStyle = '#768AA8';
-    canvas.fillRect(0, 0, this.width, window.innerHeight);
-  }
-  move() {
+    const maxHeight = Math.ceil(window.innerHeight * 0.75);
+    const maxWidth = Math.ceil(window.innerWidth);
+    canvas.width = maxWidth;
+    canvas.height = maxHeight;
+    const seaContext = canvas.getContext('2d');
+
+    console.log(seaContext);
+
+    this.width = maxWidth;
+    this.height = maxHeight;
+    this.seaElement = canvas;
+    seaContext.fillStyle = '#768AA8';
+    seaContext.fillRect(0, 0, maxWidth, maxHeight);
+
+    this.waves = [];
+
+    let i = 0;
+    while (i < 10) {
+      this.waves.push(new __WEBPACK_IMPORTED_MODULE_0__wave__["a" /* default */]({
+        maxWidth,
+        maxHeight,
+        sea: seaContext,
+      }));
+      i += 1;
+    }
 
   }
+
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Sea);
