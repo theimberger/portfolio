@@ -31,8 +31,8 @@ class Wave {
     sea.fillStyle = '#607495';
     sea.fill();
     this.coordinates = coordinates;
-    console.log(coordinates);
   }
+
   move() {
 
   }

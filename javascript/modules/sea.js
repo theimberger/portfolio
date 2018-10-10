@@ -8,8 +8,6 @@ class Sea {
     canvas.height = maxHeight;
     const seaContext = canvas.getContext('2d');
 
-    console.log(seaContext);
-
     this.width = maxWidth;
     this.height = maxHeight;
     this.seaElement = canvas;

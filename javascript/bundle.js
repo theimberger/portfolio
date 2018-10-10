@@ -101,8 +101,8 @@ class Wave {
     sea.fillStyle = '#607495';
     sea.fill();
     this.coordinates = coordinates;
-    console.log(coordinates);
   }
+
   move() {
 
   }
@@ -143,8 +143,6 @@ class Sea {
     canvas.width = maxWidth;
     canvas.height = maxHeight;
     const seaContext = canvas.getContext('2d');
-
-    console.log(seaContext);
 
     this.width = maxWidth;
     this.height = maxHeight;
