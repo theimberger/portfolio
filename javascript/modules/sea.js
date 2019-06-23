@@ -2,7 +2,7 @@ import Wave from './wave';
 
 class Sea {
   constructor (canvas) {
-    const maxHeight = Math.ceil(window.innerHeight * 0.75);
+    const maxHeight = Math.ceil(window.innerHeight * 0.7);
     const maxWidth = Math.ceil(window.innerWidth);
     canvas.width = maxWidth;
     canvas.height = maxHeight;
@@ -14,7 +14,7 @@ class Sea {
     this.context = seaContext;
     this.waves = [];
 
-    while (this.waves.length < 30) {
+    while (this.waves.length < 500) {
       this.waves.push(new Wave({
         sea: seaContext,
         initial: true,
@@ -37,7 +37,7 @@ class Sea {
     
     const newWaves = waves.filter(wave => wave);
 
-    while (newWaves.length < 100) {
+    while (newWaves.length < 500) {
       newWaves.push(new Wave({ sea: context, initial: true }));
     }
 
