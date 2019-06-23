@@ -10,22 +10,23 @@ class Wave {
       right: [],
     };
 
-    const colors = ['#5a6d8c', '#63799c', '#7386a5',];
+    const colors = ['#50617c', '#5a6d8c', '#63799c', '#7386a5',];
     const maxWidth = sea.canvas.width;
     const maxHeight = sea.canvas.height;
 
     coordinates.top.push(Math.floor(
-      (Math.random() * maxWidth) - (Math.random() * 100)
+      Math.random() * (maxWidth + 50)
     ));
 
-    this.life = 100 + Math.floor(Math.random() * 100)
+    const life = 50 + Math.floor(Math.random() * 50)
+    this.life =life
     this.age = 0
 
     coordinates.top.push(
-      Math.floor(Math.random() * (maxHeight - 100))
+      Math.floor((Math.random() ** 3) * (maxHeight)) + 1
     );
 
-    let waveWidth = Math.floor((maxWidth - (Math.random() * this.life * 2)) / 1.2);
+    let waveWidth =  10 * life + Math.floor( (Math.random()) * life * 2);
     this.width = waveWidth;
 
     waveWidth = Math.floor(
@@ -95,7 +96,7 @@ class Wave {
     sea.fillStyle = color;
     sea.fill();
 
-    return coordinates.top[1] > sea.canvas.height || waveHeight < 0;
+    return coordinates.top[1] > sea.canvas.height || (waveHeight < 0 && age > life);
   }
 
   drop() {
