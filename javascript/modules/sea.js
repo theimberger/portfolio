@@ -11,23 +11,38 @@ class Sea {
     this.width = maxWidth;
     this.height = maxHeight;
     this.seaElement = canvas;
-    seaContext.fillStyle = '#768AA8';
-    seaContext.fillRect(0, 0, maxWidth, maxHeight);
-
+    this.context = seaContext;
     this.waves = [];
 
-    let i = 0;
-    while (i < 10) {
+    while (this.waves.length < 30) {
       this.waves.push(new Wave({
-        maxWidth,
-        maxHeight,
         sea: seaContext,
+        initial: true,
       }));
-      i += 1;
+    }
+    setInterval(() => this.moveWaves(), 25);
+  }
+  moveWaves() {
+    const {
+      context,
+      waves,
+    } = this;
+
+    context.clearRect(0, 0, 2000, 2000);
+    waves.forEach((wave, idx) => {
+      const deleteWave = wave.move();
+      if (deleteWave) waves[idx] = false;
+    });
+
+    
+    const newWaves = waves.filter(wave => wave);
+
+    while (newWaves.length < 100) {
+      newWaves.push(new Wave({ sea: context, initial: true }));
     }
 
+    this.waves = newWaves;
   }
-
 }
 
 export default Sea;
