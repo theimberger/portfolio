@@ -1,12 +1,28 @@
-import React from 'react';
-import { Sea, Sky, Contact } from './components'
+import React, { Component } from 'react';
+import { Sea, Sky, Contact, Projects } from './components'
 
-const App = () => (
-  <div className="App">
-    <Sky />
-    <Sea />
-    <Contact />
-  </div>
-)
+class App extends Component {
+  state = {
+    projectsVisible: false,
+  }
+
+  toggleProjects = (projectsVisible) => () => { this.setState({ projectsVisible }) }
+
+  render() {
+    const {
+      state: { projectsVisible },
+      toggleProjects,
+    } = this
+
+    return (
+      <div className="App">
+        <Sky projectsVisible={projectsVisible} />
+        <Sea projectsVisible={projectsVisible} />
+        <Contact toggleProjects={toggleProjects} projectsVisible={projectsVisible} />
+        <Projects visible={projectsVisible} />
+      </div>
+    )
+  }
+}
 
 export default App;

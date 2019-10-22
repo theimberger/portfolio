@@ -38,7 +38,7 @@ p {
   right: 0;
   width: 100%;
   height: 100%;
-  background: #BCD0DD;
+  background: rgb(188, 208, 221);
   z-index: 5;
 }
 
@@ -50,6 +50,11 @@ p {
   height: 75%;
   background: #46556D;
   z-index: 10;
+  transition: 3s ease-in-out;
+}
+
+#sea.moved-down {
+  bottom: -50%;
 }
 
 #contact {
@@ -68,7 +73,7 @@ p {
   padding-top: 0px;
 }
 
-#extra-links img, #extra-links p {
+#extra-links img, #extra-links button {
   margin: 15px 5px;
   height: 30px;
   opacity: 0;
@@ -76,15 +81,84 @@ p {
   cursor: pointer;
 }
 
-#extra-links p  {
+#extra-links button  {
+  display: block;
+  box-sizing: border-box;
   margin: 0;
-  text-decoration: underline;
+  width: 100%;
+  font-size: 18px;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  outline: none;
 }
 
-#contact:hover #extra-links img, #contact:hover #extra-links p {
+#contact:hover #extra-links img, #contact:hover #extra-links button {
   opacity: 1;
 }
 
 .email p {
   font-family: 'Lobster Two', cursive;
+}
+
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 75%;
+  width: 75%;
+  padding: 20px 0;
+  overflow: hidden;
+  z-index: 15;
+  opacity: 0;
+  transition: 5s ease-in;
+}
+
+main.visible {
+  opacity: 1;
+}
+
+main ul {
+  overflow-x: scroll;
+  height: 105%;
+  width: 100%;
+  white-space: nowrap;
+  list-style-type: none;
+  display: flex;
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+
+main ul li {
+  display: block;
+  width: 50%;
+  height: 80%;
+  margin: 20px 20px 0 0;
+  box-sizing: border-box;
+  background: white;
+  list-style-type: none;
+  flex-shrink: 0;
+  border-radius: 20px;
+  padding: 20px;
+  white-space: normal;;
+}
+
+main ul li p {
+  margin-top: 20px;;
+  font-size: 16px;
+}
+main ul li h2 {
+  font-size: 24px;
+}
+
+.projects-overlay {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  margin-top: 40px;
+  background-image: linear-gradient(to right, rgba(188, 208, 221, 0) 50%, rgba(188, 208, 221, 1) 90%);
+  pointer-events: none;
 }
