@@ -50,7 +50,7 @@ p {
   height: 75%;
   background: #46556D;
   z-index: 10;
-  transition: 3s ease-in-out;
+  transition: 2s ease-in-out;
 }
 
 #sea.moved-down {
@@ -112,7 +112,8 @@ main {
   overflow: hidden;
   z-index: 15;
   opacity: 0;
-  transition: 5s ease-in;
+  transition: 3s ease-in;
+  transition-delay: 1s;
 }
 
 main.visible {
@@ -139,14 +140,27 @@ main ul li {
   background: white;
   list-style-type: none;
   flex-shrink: 0;
-  border-radius: 20px;
   padding: 20px;
-  white-space: normal;;
+  white-space: normal;
+  background-image: linear-gradient(180deg, rgba(188, 208, 221, 0) 65%, rgba(188, 208, 221, 1) 95%);
 }
 
 main ul li p {
   margin-top: 20px;;
   font-size: 16px;
+}
+
+.project-links {
+  margin-top: 20px;;
+  font-size: 12px;
+}
+
+.project-links a {
+  cursor: pointer;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
 }
 main ul li h2 {
   font-size: 24px;
@@ -159,6 +173,6 @@ main ul li h2 {
   top: 0;
   z-index: 10;
   margin-top: 40px;
-  background-image: linear-gradient(to right, rgba(188, 208, 221, 0) 50%, rgba(188, 208, 221, 1) 90%);
+  background-image: linear-gradient(120deg, rgba(188, 208, 221, 0) 30%, rgba(188, 208, 221, 1) 70%);
   pointer-events: none;
 }

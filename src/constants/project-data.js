@@ -18,10 +18,10 @@ const ProjectData = [
   {
     id: 10,
     title: 'a simple color game',
-    liveURL: 'http://www.namehalloffame.org',
-    githubRepo: 'https://github.com/theimberger/nhof',
+    liveURL: 'https://github.com/theimberger/color-game',
+    githubRepo: 'https://theimberger.github.io/color-game/',
     image: '',
-    description: 'A basic game where the player identifies the off-color tile.',
+    description: 'A basic game where the player identifies the off-color tile.  Built so I could learn more about Vue.js.',
   },
 ]
 

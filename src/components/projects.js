@@ -8,6 +8,13 @@ const Projects = ({visible}) => {
         { ProjectData.map(project => (
           <li key={project.id}>
             <h2>{project.title}</h2>
+            <span className='project-links'>
+              <a target='_blank' href={project.liveURL}>
+                see it live
+              </a> / <a target='_blank' href={project.githubRepo}>
+                see the code
+              </a>
+            </span>
             <p>{project.description}</p>
           </li>
         ))}
