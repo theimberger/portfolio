@@ -1,6 +1,6 @@
 import Wave from './wave';
 
-class Sea {
+class SeaClass {
   constructor (canvas) {
     const maxHeight = Math.ceil(window.innerHeight * 0.7);
     const maxWidth = Math.ceil(window.innerWidth);
@@ -45,4 +45,4 @@ class Sea {
   }
 }
 
-export default Sea;
+export default SeaClass;
