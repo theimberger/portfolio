@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ProjectData from '../constants/project-data'
 
 const Projects = ({visible}) => {
@@ -7,6 +7,7 @@ const Projects = ({visible}) => {
       <ul>
         { ProjectData.map(project => (
           <li key={project.id}>
+            <img src={project.image} alt={project.title} className='project-image'/ >
             <h2>{project.title}</h2>
             <span className='project-links'>
               <a target='_blank' href={project.liveURL}>
