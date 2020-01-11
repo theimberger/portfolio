@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.66299b04.chunk.css",
+    "main.js": "/portfolio/static/js/main.f5b4eebc.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.f5b4eebc.chunk.js.map",
+    "runtime~main.js": "/portfolio/static/js/runtime~main.36963274.js",
+    "runtime~main.js.map": "/portfolio/static/js/runtime~main.36963274.js.map",
+    "static/js/2.ac22e2bc.chunk.js": "/portfolio/static/js/2.ac22e2bc.chunk.js",
+    "static/js/2.ac22e2bc.chunk.js.map": "/portfolio/static/js/2.ac22e2bc.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.529f9d2bea1f707f3648074b9e76b72f.js": "/portfolio/precache-manifest.529f9d2bea1f707f3648074b9e76b72f.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.66299b04.chunk.css.map": "/portfolio/static/css/main.66299b04.chunk.css.map",
+    "static/media/color-game.png": "/portfolio/static/media/color-game.a196fe96.png",
+    "static/media/nhof.png": "/portfolio/static/media/nhof.9399243c.png",
+    "static/media/relax.png": "/portfolio/static/media/relax.903de989.png",
+    "static/media/wikipedia-crawler.png": "/portfolio/static/media/wikipedia-crawler.9951366e.png"
+  }
+}
