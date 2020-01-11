@@ -18,15 +18,15 @@ class Wave {
       Math.random() * (maxWidth + 50)
     ));
 
-    const life = 50 + Math.floor(Math.random() * 50)
-    this.life =life
+    const life = 10 + Math.floor(Math.random() * 10)
+    this.life = life
     this.age = 0
 
     coordinates.top.push(
       Math.floor((Math.random() ** 3) * (maxHeight)) + 1
     );
 
-    let waveWidth =  10 * life + Math.floor( (Math.random()) * life * 2);
+    let waveWidth =  50 * life + Math.floor( (Math.random()) * life * 2);
     this.width = waveWidth;
 
     waveWidth = Math.floor(

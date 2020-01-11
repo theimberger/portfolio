@@ -14,7 +14,7 @@ class SeaClass {
     this.context = seaContext;
     this.waves = [];
 
-    while (this.waves.length < 500) {
+    while (this.waves.length < 1000) {
       this.waves.push(new Wave({
         sea: seaContext,
         initial: true,
@@ -37,7 +37,7 @@ class SeaClass {
     
     const newWaves = waves.filter(wave => wave);
 
-    while (newWaves.length < 500) {
+    while (newWaves.length < 1000) {
       newWaves.push(new Wave({ sea: context, initial: true }));
     }
 
