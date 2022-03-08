@@ -58,18 +58,15 @@ p {
 
 #contact {
   position: fixed;
-  top: 30%;
+  top: 5%;
   padding-top: 30px;
   right: 0;
   color: white;
   padding-right: 5%;
   text-align: right;
-  transition: padding 1s;
-  z-index: 15;
-}
-
-#contact:hover {
-  padding-top: 0px;
+  transition: 3s ease-in;
+  transition-delay: 1s;
+  z-index: 100;
 }
 
 #extra-links img, #extra-links button {
@@ -88,13 +85,17 @@ p {
   font-size: 18px;
   color: white;
   background: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 10px;
   outline: none;
 }
 
 #contact:hover #extra-links img, #contact:hover #extra-links button {
   opacity: 1;
+}
+
+#contact.moved-down:hover #extra-links button {
+  opacity: 0;
 }
 
 .email p {
@@ -107,7 +108,7 @@ main {
   left: 0;
   height: 75%;
   width: 75%;
-  padding: 20px 0;
+  padding: 0;
   overflow: hidden;
   z-index: 15;
   opacity: 0;
@@ -119,21 +120,36 @@ main.visible {
   opacity: 1;
 }
 
+main .projects-wrapper {
+  overflow-x: scroll;
+  height: 120%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 main ul {
   overflow-x: scroll;
-  height: 110%;
+  overflow-y: hidden;
+  height: 70%;
   width: 100%;
   white-space: nowrap;
   list-style-type: none;
   display: flex;
-  padding: 0 0 0 20px;
   margin: 0;
+  background: white;
+}
+
+main ul::-webkit-scrollbar {
+  display: none;
 }
 
 main ul li {
+  overflow-y: hidden;
+  overflow-x: scroll;
   display: block;
   width: 40%;
-  height: 70%;
+  height: 100%;
   margin: 20px 20px 0 0;
   box-sizing: border-box;
   background: white;
@@ -141,8 +157,12 @@ main ul li {
   flex-shrink: 0;
   padding: 20px;
   white-space: normal;
-  background-image: linear-gradient(180deg, rgba(188, 208, 221, 0) 65%, rgba(188, 208, 221, 1) 95%);
   overflow: scroll;
+  border-right: 2px solid rgb(188, 208, 221);
+}
+
+main ul li:last-of-type {
+  border-right: none;
 }
 
 main ul li p {
@@ -165,19 +185,77 @@ main ul li h2 {
   font-size: 24px;
 }
 
+ul .list-spacer {
+  display: block;
+  width: 40%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
 .projects-overlay {
   width: 100%;
-  height: 75%;
+  height: 85%;
   position: absolute;
   top: 0;
   z-index: 10;
-  margin-top: 40px;
-  background-image: linear-gradient(120deg, rgba(188, 208, 221, 0) 30%, rgba(188, 208, 221, 1) 75%);
+  margin-top: 0;
+  background-image: linear-gradient(120deg, rgba(188, 208, 221, 0) 35%, rgba(188, 208, 221, 1) 75%);
   pointer-events: none;
+}
+
+.projects-overlay--bottom {
+  background-image: linear-gradient(180deg, rgba(188, 208, 221, 0) 40%, rgba(188, 208, 221, 1) 100%);
 }
 
 .project-image {
   display: block;
   margin: 0 auto;
   width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+  #contact.moved-down {
+    opacity: 0;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  main .projects-wrapper {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  main ul {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 70%;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  main ul::-webkit-scrollbar {
+    display: none;
+  }
+  
+  main ul li {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-right: none;
+    border-bottom: 2px solid rgb(188, 208, 221);
+    box-sizing: border-box;
+  }
+
+  .projects-overlay {
+    background-image: none;
+  }
+  
+  .projects-overlay--bottom {
+    background-image: linear-gradient(180deg, rgba(188, 208, 221, 0) 40%, rgba(188, 208, 221, 1) 90%);
+  }
 }

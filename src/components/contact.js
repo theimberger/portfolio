@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ghImg from '../static/github.png'
+import liImg from '../static/linkedin.png'
 
 const Contact = ({ toggleProjects, projectsVisible }) => (
 	<section id='contact' className={`${projectsVisible ? 'moved-down' : ''}`}>
@@ -8,8 +10,8 @@ const Contact = ({ toggleProjects, projectsVisible }) => (
 			<p>(at gmail)</p>
 		</a>
 		<div id='extra-links'>
-			<a href='https://github.com/theimberger'><img src='./static/images/github.png' /></a>
-			<a href='https://www.linkedin.com/in/thomas-heimberger-46b255141/'><img src='./static/images/linkedin.png' /></a>
+			<a href='https://github.com/theimberger'><img src={ ghImg } /></a>
+			<a href='https://www.linkedin.com/in/thomas-heimberger/'><img src={ liImg } /></a>
 			<button onClick={toggleProjects(!projectsVisible)}>see some work</button>
 		</div>
 	</section>

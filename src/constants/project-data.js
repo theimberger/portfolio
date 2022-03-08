@@ -14,7 +14,7 @@ const ProjectData = [
   },
   {
     id: 11,
-    title: 'the name hall of fame',
+    title: 'name hall of fame',
     liveURL: 'http://www.namehalloffame.org',
     githubRepo: 'https://github.com/theimberger/nhof',
     image: nhofIng,
@@ -22,9 +22,9 @@ const ProjectData = [
   },
   {
     id: 12,
-    title: 'a simple color game',
-    liveURL: 'https://github.com/theimberger/color-game',
-    githubRepo: 'https://theimberger.github.io/color-game/',
+    title: 'simple color game',
+    liveURL: 'https://theimberger.github.io/color-game/',
+    githubRepo: 'https://github.com/theimberger/color-game',
     image: cgImg,
     description: 'A basic game where the player identifies the off-color tile.  Built so I could learn more about Vue.js.',
   },
