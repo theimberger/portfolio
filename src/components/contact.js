@@ -12,7 +12,7 @@ const Contact = ({ toggleProjects, projectsVisible }) => (
 		<div id='extra-links'>
 			<a href='https://github.com/theimberger'><img src={ ghImg } /></a>
 			<a href='https://www.linkedin.com/in/thomas-heimberger/'><img src={ liImg } /></a>
-			<button onClick={toggleProjects(!projectsVisible)}>see some work</button>
+			{/* <button onClick={toggleProjects(!projectsVisible)}>see some work</button> */}
 		</div>
 	</section>
 )
